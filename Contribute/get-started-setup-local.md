@@ -8,11 +8,11 @@ ms.date: 01/18/2018
 ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
-ms.openlocfilehash: d9c7211641fb05aaca8a76e10c7216ff61a5d23c
-ms.sourcegitcommit: dd1b4e915f4996ac029d2a0704ced785438d3484
+ms.openlocfilehash: f702d0d29ee7dc9c69cb26b79bf6283d91b6b6bc
+ms.sourcegitcommit: 3ec397fab57ea582edb03a59609f62d886410ee8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="set-up-git-repository-locally-for-documentation"></a>Локальная настройка репозитория Git для документации
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 04/23/2018
 > * настроить значение вышестоящего удаленного источника.
 
 > [!IMPORTANT]
-> Если вы вносите в статью лишь небольшие изменения, вам *не* нужно выполнять описанные здесь шаги. Вы можете перейти непосредственно к [рабочему процессу по внесению мелких и редких изменений](light-workflow.md).
+> Если вы вносите в статью лишь небольшие изменения, вам *не* нужно выполнять описанные здесь шаги. Вы можете перейти непосредственно к [рабочему процессу по внесению быстрых изменений](index.md#quick-edits-to-existing-documents).
 >
 
 ## <a name="overview"></a>Общие сведения
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/23/2018
 
 1. Если вы точно не знаете, какой репозиторий использовать, откройте статью на сайте docs.microsoft.com в своем веб-браузере. Справа над статьей выберите ссылку **Правка** (значок карандаша).
 
-   ![Щелкните "Правка", чтобы определить расположение репозитория и файлов.](media/edit-article.png)
+   ![Щелкните "Правка", чтобы определить расположение репозитория и файлов.](media/index/edit-article.png)
 
 2. По этой ссылке вы перейдете к расположению нужного файла Markdown в соответствующем репозитории на сайте github.com. Запишите URL-адрес, чтобы узнать имя репозитория.
 

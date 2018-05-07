@@ -1,18 +1,18 @@
 ---
 title: Установка средств для создания содержимого
 description: Эта статья поможет вам скачать и установить клиентские средства, необходимые для редактирования файлов Markdown и работы с Git.
-author: bryanla
-ms.author: bryanla
-manager: mbaldwin
-ms.date: 01/04/2018
+author: jasonwhowell
+ms.author: jasonh
+manager: kfile
+ms.date: 04/30/2018
 ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 0ca942e557640db1ba36d3f5b1064656ed3dea8d
-ms.sourcegitcommit: 3ec397fab57ea582edb03a59609f62d886410ee8
+ms.openlocfilehash: 1011c3fc829202a3df134ddc80eb05b8959b7bf6
+ms.sourcegitcommit: 7b668124f25b8ad0442937a3ad05b19a47af5970
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-content-authoring-tools"></a>Установка средств для создания содержимого
 
@@ -20,6 +20,7 @@ ms.lasthandoff: 04/28/2018
 > [!div class="checklist"]
 > * Установка [Git для Windows](https://git-scm.com/download/win).
 > * Установка [Visual Studio Code](https://code.visualstudio.com/).
+> * Установка [пакета создания документации](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack).
 
 >[!IMPORTANT]
 > Если вы вносите в статью лишь небольшие изменения, вам *не* нужно выполнять описанные здесь шаги. Вы можете сразу перейти к [рабочему процессу по внесению быстрых изменений](index.md#quick-edits-to-existing-documents).
@@ -58,6 +59,16 @@ Markdown — это упрощенный язык разметки, которы
 
 > [!TIP]
 > Чтобы запустить VS Code и открыть текущую папку, выполните команду `code .` в командной строке или оболочке Bash. Если текущая папка содержится в локальном репозитории Git, в Visual Studio Code автоматически отобразятся данные об интеграции с GitHub.
+
+## <a name="docs-authoring-pack"></a>Пакет создания документации
+Установка пакета создания документации для Visual Studio Code. Этот набор исключений включает базовые рекомендации по использованию справки при написании с помощью Markdown и функцию предварительного просмотра. Это позволяет просматривать стиль текстов Markdown на сайте docs.microsoft.com.
+
+   На этой [странице Marketplace](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) выберите **Установить** или найдите `docsmsft.docs-authoring-pack` в списке расширений в окне VS Code. 
+
+   Пакет создания документации можно открыть с помощь.клавиш ALT+M за пределами VS Code. Панель инструментов по умолчанию спрятана, но ее можно отобразить. Измените параметры VS Code (CTRL+запятая) и добавьте пользовательский параметр `"markdown.showToolbar": true` для отображения панели инструментов.
+
+   Дополнительные сведения см. на [странице справки по пакету создания документации](how-to-write-docs-auth-pack.md).
+
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
