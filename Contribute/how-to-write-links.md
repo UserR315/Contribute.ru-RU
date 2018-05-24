@@ -9,10 +9,10 @@ ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
 ms.openlocfilehash: 1699e57ac6a4dc4c5a1ef099ea183b3cbc6307cd
-ms.sourcegitcommit: de6e6b6ca641fdd5b30eb46deee9ac3a500089ef
+ms.sourcegitcommit: e046e7aad8ed22bffe5380d63a9d40f0baeecc57
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="using-links-in-documentation"></a>Использование ссылок в документации
 В этой статье описывается использование гиперссылок со страниц, размещенных на сайте docs.microsoft.com. Добавление ссылок в Markdown не представляет труда, но следует придерживаться ряда определенных правил. Ссылки могут указывать на содержимое на той же странице, на соседних страницах или вести на внешние сайты и URL-адреса.
