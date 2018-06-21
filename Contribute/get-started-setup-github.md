@@ -1,19 +1,13 @@
 ---
 title: Процедура настройки учетной записи GitHub
 description: В этой статье приводятся инструкции по настройке учетных записей GitHub, которые требуются для участия в создании содержимого на сайте docs.microsoft.com.
-author: bryanla
-ms.author: bryanla
-manager: mbaldwin
 ms.date: 02/27/2018
-ms.prod: non-product-specific
-ms.topic: contributor-guide
-ms.custom: external-contributor-guide
-ms.openlocfilehash: 131736a3b12314147ae5f3f76813527d8bcd15bc
-ms.sourcegitcommit: 782b689882cce3ce07f5613763322989f2d0d63f
+ms.openlocfilehash: 15fa7c11090a5c4faefe38d00d273e92c231329b
+ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34469470"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238950"
 ---
 # <a name="github-account-setup"></a>Настройка учетной записи GitHub
 
