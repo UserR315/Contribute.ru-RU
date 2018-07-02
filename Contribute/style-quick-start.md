@@ -1,19 +1,13 @@
 ---
 title: Краткое руководство по стилю документации
 description: Эта статья представляет собой краткое руководство по стилю документации, содержащее общие принципы для начала работы по написанию статей для сайта docs.microsoft.com.
-author: bryanla
-ms.author: bryanla
-manager: mbaldwin
 ms.date: 07/25/2017
-ms.prod: non-product-specific
-ms.topic: contributor-guide
-ms.custom: external-contributor-guide
-ms.openlocfilehash: 74f78b72f61cfebddb0cb03b73a3a806f4fe4a10
-ms.sourcegitcommit: 782b689882cce3ce07f5613763322989f2d0d63f
+ms.openlocfilehash: 34cd0dc1760f2a569f8bfec782f04b2691a74470
+ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34469401"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36239610"
 ---
 # <a name="docs-style-and-voice-quick-start"></a>Краткое руководство по стилю документации
 
@@ -56,5 +50,6 @@ ms.locfileid: "34469401"
 ## <a name="localized-documentation"></a>Локализованная документация
 
 - Если вы работаете с локализованной документацией, используйте [языковой портал Майкрософт](https://www.microsoft.com/Language/Default.aspx).
-- Рекомендации по локализации, инструкции по использованию стиля и языка в технической документации, а также сведения о формате данных для определенного региона см. в доступном для скачивания [руководстве по стилю](https://www.microsoft.com/Language/StyleGuides.aspx) на нужном языке.
-- Необходимо использовать локализованную [утвержденную терминологию Майкрософт для определенного продукта](https://www.microsoft.com/Language/Search.aspx). Также можно скачать [коллекцию терминов Майкрософт](https://www.microsoft.com/Language/Terminology.aspx) на нужном языке.
+- Рекомендации по локализации, инструкции по использованию стиля и языка в технической документации, а также сведения о формате данных для определенного региона см. в доступном для скачивания [руководстве по стилю](https://www.microsoft.com/Language/StyleGuides) на нужном языке.
+- Необходимо использовать локализованную [утвержденную терминологию Майкрософт для определенного продукта](https://www.microsoft.com/Language/Default.aspx). Также можно скачать [коллекцию терминов Майкрософт](https://www.microsoft.com/Language/Terminology.aspx) на нужном языке.
+- Дополнительные сведения см. в разделе [Локализация](https://docs.microsoft.com/style-guide/global-communications/) стилевого руководства Майкрософт.

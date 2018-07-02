@@ -1,19 +1,13 @@
 ---
 title: Использование ссылок в документации
 description: В этой статье содержатся инструкции по созданию ссылок на содержимое на сайте docs.microsoft.com.
-author: bryanla
-ms.author: bryanla
-manager: mbaldwin
 ms.date: 06/29/2017
-ms.prod: non-product-specific
-ms.topic: contributor-guide
-ms.custom: external-contributor-guide
-ms.openlocfilehash: 1699e57ac6a4dc4c5a1ef099ea183b3cbc6307cd
-ms.sourcegitcommit: 782b689882cce3ce07f5613763322989f2d0d63f
+ms.openlocfilehash: a66e2fb4febf1947afe01919b96b1c10873cf57d
+ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34469539"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36239733"
 ---
 # <a name="using-links-in-documentation"></a>Использование ссылок в документации
 В этой статье описывается использование гиперссылок со страниц, размещенных на сайте docs.microsoft.com. Добавление ссылок в Markdown не представляет труда, но следует придерживаться ряда определенных правил. Ссылки могут указывать на содержимое на той же странице, на соседних страницах или вести на внешние сайты и URL-адреса.
@@ -63,7 +57,10 @@ ms.locfileid: "34469539"
   `[link text](../directory/article-name.md)`
 
 - Для статьи, ссылка на которую добавляется в разные docset (даже в рамках одного репозитория): `[link text](./directory/article-name)`
-  
+
+> [!IMPORTANT]
+> Ни в одном из примеров выше `~/` не используется в качестве части ссылки. Если вы ссылаетесь на путь в корне репозитория, начните с `/`. Добавление `~/` приведет к формированию недопустимых ссылок при навигации по репозиториям исходного кода на GitHub. Если начать путь с `/`, разрешение происходит успешно.
+
 ## <a name="links-to-anchors"></a>Ссылки на привязки
 
 Создавать привязки не требуется. Они автоматически генерируются для всех заголовков H2 во время публикации. Достаточно создать ссылки на разделы H2.
