@@ -2,12 +2,12 @@
 title: Использование ссылок в документации
 description: В этой статье содержатся инструкции по созданию ссылок на содержимое на сайте docs.microsoft.com.
 ms.date: 06/29/2017
-ms.openlocfilehash: a66e2fb4febf1947afe01919b96b1c10873cf57d
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: dad0460cfb36594c17cef1b079c5fc14191f56f7
+ms.sourcegitcommit: 886ca76086a302d1d6124967df12a5bcfe4fd4b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36239733"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251474"
 ---
 # <a name="using-links-in-documentation"></a>Использование ссылок в документации
 В этой статье описывается использование гиперссылок со страниц, размещенных на сайте docs.microsoft.com. Добавление ссылок в Markdown не представляет труда, но следует придерживаться ряда определенных правил. Ссылки могут указывать на содержимое на той же странице, на соседних страницах или вести на внешние сайты и URL-адреса.
@@ -148,12 +148,12 @@ ms.locfileid: "36239733"
 
 Часть &lt;moniker-name&gt; является необязательной. Если ее исключить, пользователь будет направлен к последней версии содержимого. Для части &lt;service-name&gt; можно задать одно из значений в примерах базовых URL-адресов ниже:
 
-- Содержимое Azure PowerShell (AzureRM): https://docs.microsoft.com/powershell/azure/
-- Содержимое Azure PowerShell (ASM) : https://docs.microsoft.com/powershell/azure/_servicemanagement_
-- Содержимое Azure PowerShell для Active Directory (AzureAD): https://docs.microsoft.com/powershell/azure/_active-directory_
-- PowerShell для Azure Service Fabric https://docs.microsoft.com/powershell/azure/_service-fabric_
-- PowerShell для Azure Information Protection: https://docs.microsoft.com/powershell/azure/_aip_
-- PowerShell для заданий эластичной базы данных заданий Azure: https://docs.microsoft.com/powershell/azure/_elasticdbjobs_
+- Содержимое Azure PowerShell (AzureRM): [https://docs.microsoft.com/powershell/azure/](https://docs.microsoft.com/powershell/azure/)
+- Содержимое Azure PowerShell (ASM) : [https://docs.microsoft.com/powershell/azure/_servicemanagement_](https://docs.microsoft.com/powershell/azure/servicemanagement)
+- Содержимое Azure PowerShell для Active Directory (AzureAD): [https://docs.microsoft.com/powershell/azure/_active-directory_](https://docs.microsoft.com/powershell/azure/active-directory)
+- PowerShell для Azure Service Fabric [https://docs.microsoft.com/powershell/azure/_service-fabric_](https://docs.microsoft.com/powershell/azure/service-fabric)
+- PowerShell для Azure Information Protection: [https://docs.microsoft.com/powershell/azure/_aip_](https://docs.microsoft.com/powershell/azure/aip)
+- PowerShell для заданий эластичной базы данных заданий Azure: [https://docs.microsoft.com/powershell/azure/_elasticdbjobs_](https://docs.microsoft.com/powershell/azure/elasticdbjobs)
 
 Если включить эти URL-адреса, пользователь будет перенаправлен к последней версии содержимого. В таком случае указывать моникер версии не требуется. Кроме того, вам не придется обновлять ссылки на тематические материалы при изменении версии.
 

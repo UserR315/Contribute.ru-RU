@@ -5,18 +5,18 @@ author: jasonwhowell
 ms.author: jasonh
 manager: kfile
 ms.date: 04/30/2018
-ms.openlocfilehash: 00631485f1f4eed9e0de2f6df98d973a819dfe4d
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: 9f22a416810711c076645a9483f022112a3a7642
+ms.sourcegitcommit: 886ca76086a302d1d6124967df12a5bcfe4fd4b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238927"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251447"
 ---
 # <a name="install-content-authoring-tools"></a>Установка средств для создания содержимого
 
 В этой статье объясняется, как установить клиентские средства Git и Visual Studio Code в интерактивном режиме.
 > [!div class="checklist"]
-> * Установка [Git для Windows](https://git-scm.com/download/win).
+> * Установка [Git](https://git-scm.com/)
 > * Установка [Visual Studio Code](https://code.visualstudio.com/).
 > * Установка [пакета создания документации](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack).
 
@@ -25,9 +25,13 @@ ms.locfileid: "36238927"
 >
 > Участникам, которые вносят много изменений, рекомендуется выполнить инструкции, которые позволят применить [рабочий процесс по внесению значительных или времязатратных изменений](how-to-write-workflows-major.md). Даже если у вас есть разрешения на запись в основном репозитории, *настоятельно рекомендуется (и в этом руководстве предполагается, что вы это сделаете) создать вилку и клон репозитория*, чтобы у вас были права на чтение и запись для хранения в этой вилке предлагаемых вами изменений.
 
-## <a name="install-git-client-tools-on-windows"></a>Установка клиентских средств Git в Windows
+## <a name="install-git-client-tools"></a>Установка клиентских средств для Git 
 
- Установите последние версии [клиентских средств Git от Software Freedom Conservancy](https://git-scm.com/download/). Пакет установки включает систему управления версиями Git и приложение командной строки Git Bash, используемое для взаимодействия с локальным репозиторием Git.
+ Установите последнюю версию [клиентских средств Git от Software Freedom Conservancy](https://git-scm.com/download/) для своей платформы. 
+
+* [Git для Windows](https://git-scm.com/download/win). Пакет установки включает систему управления версиями Git и приложение командной строки Git Bash, используемое для взаимодействия с локальным репозиторием Git.
+* Git для Mac предоставляется как часть средств командной строки Xcode. Просто запустите `git` из командной строки. При необходимости вам будет предложено установить средства командной строки. Вы также можете скачать [Git для Mac](https://git-scm.com/download/mac) из Software Freedom Conservancy.
+* [Git для Linux и Unix](https://git-scm.com/download/linux)
 
 Если вы предпочитаете использовать графический пользовательский интерфейс вместо интерфейса командной строки, см. сведения о часто используемых параметрах на странице [доступных средств графического пользовательского интерфейса Software Freedom Conservancy](https://git-scm.com/downloads/guis), на сайте [версии GitHub для настольного компьютера](https://desktop.github.com/) или на сайте [Visual Studio Code](https://www.visualstudio.com/products/code-vs.aspx).
 
