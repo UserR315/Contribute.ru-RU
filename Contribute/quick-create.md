@@ -6,14 +6,14 @@ author: syntaxc4
 manager: erifkin
 ms.date: 07/24/2018
 ms.author: cfowler
-zone_pivot_groups: keyvault-languages, keyvault-platforms
+zone_pivot_groups: keyvault-languages
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 8b758274203748bb6e04c03dec5de38fb77947b4
-ms.sourcegitcommit: b0105f322f91bb4dbde47f6da35b3c12271d5b03
+ms.openlocfilehash: 27ebd3e348fc231d8b82e6c17f282bd9ca4afb9f
+ms.sourcegitcommit: 5e508a7ad2991632a38f302e4769b36e3bf37eb2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43239510"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43308831"
 ---
 # <a name="quickstart-set-and-retrieve-a-secret-from-azure-key-vault"></a>Краткое руководство. Настройка и получение секрета из Azure Key Vault
 
@@ -29,24 +29,17 @@ ms.locfileid: "43239510"
 
 Прежде чем продолжить, убедитесь, что вы ознакомились с [основными понятиями](https://docs.microsoft.com/azure/key-vault/key-vault-whatis#basic-concepts).
 
->[!NOTE]
-Чтобы понять, почему в этом руководстве приводятся именно такие рекомендации, необходимо разобраться в нескольких основных понятиях. Хранилище Key Vault — это центральный репозиторий для хранения секретов программным способом. Но чтобы воспользоваться возможностями хранилища Key Vault, приложения или пользователи должны сначала пройти в нем проверку подлинности, т. е. предоставить секрет. В соответствии с рекомендациями по безопасности первый секрет должен периодически меняться. Однако благодаря [управляемому удостоверению службы](https://docs.microsoft.com/azure/active-directory/managed-service-identity/overview) приложения, работающие в Azure, получают удостоверение, которым автоматически управляет служба Azure. Это помогает устранить **проблему введения секрета**, чтобы пользователи и приложения могли следовать рекомендациям и не беспокоиться об изменении первого секрета.
+> [!NOTE]
+> Чтобы понять, почему в этом руководстве приводятся именно такие рекомендации, необходимо разобраться в нескольких основных понятиях. Хранилище Key Vault — это центральный репозиторий для хранения секретов программным способом. Но чтобы воспользоваться возможностями хранилища Key Vault, приложения или пользователи должны сначала пройти в нем проверку подлинности, т. е. предоставить секрет. В соответствии с рекомендациями по безопасности первый секрет должен периодически меняться. Однако благодаря [управляемому удостоверению службы](https://docs.microsoft.com/azure/active-directory/managed-service-identity/overview) приложения, работающие в Azure, получают удостоверение, которым автоматически управляет служба Azure. Это помогает устранить **проблему введения секрета**, чтобы пользователи и приложения могли следовать рекомендациям и не беспокоиться об изменении первого секрета.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 ::: zone pivot="nodejs"
-* [Node JS](https://nodejs.org/en/) ::: zone-end
-
-::: zone pivot="dotnet, windows"
+* [Node JS](https://nodejs.org/en/) ::: zone-end ::: zone pivot="dotnet"
 * [Visual Studio 2017 начиная с версии 15.7.3](https://www.microsoft.com/net/download/windows) со следующими рабочими нагрузками:
   * ASP.NET и веб-разработка;
   * кроссплатформенная разработка .NET Core.
 * [Пакет SDK для .NET Core начиная с версии 2.1](https://www.microsoft.com/net/download/windows) :::zone-end
-
-::: zone pivot="dotnet, mac"
-* Дополнительные сведения см. в статье [Новые возможности Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/).
-:::zone-end
-
 * Git ([скачать](https://git-scm.com/downloads)).
 * Подписка Azure. Если у вас еще нет подписки Azure, [создайте бесплатную учетную запись Azure](https://azure.microsoft.com/free/?WT.mc_id=A261C142F), прежде чем начинать работу.
 * [Интерфейс командной строки Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) начиная с версии 2.0.4. Доступен для Windows, Mac и Linux.
@@ -168,10 +161,10 @@ git clone https://github.com/Azure-Samples/key-vault-node-quickstart.git
     ```bash
     git remote add azure <url>
     ```
+    
 ::: zone-end
 
 ::: zone pivot="dotnet"
-
 ## <a name="open-and-edit-the-solution"></a>Открытие и изменение решения
 
 Измените файл program.cs, чтобы запустить образец со своим именем хранилища ключей.
@@ -197,7 +190,6 @@ git clone https://github.com/Azure-Samples/key-vault-node-quickstart.git
 5. Щелкните **Создать**.
 
 >[!VIDEO https://sec.ch9.ms/ch9/e93d/a6ac417f-2e63-4125-a37a-8f34bf0fe93d/KeyVault_high.mp4]
-
 ::: zone-end
 
 ## <a name="enable-managed-service-identities"></a>Настройка управляемых удостоверений служб
@@ -242,7 +234,9 @@ git push azure master
 ```
 
 После этого на странице https://<app_name>.azurewebsites.net вы сможете увидеть значение секрета.
-Не забудьте заменить имя <YourKeyVaultName> именем своего хранилища. ::: zone-end
+Убедитесь, что вы заменили имя <YourKeyVaultName> именем своего хранилища
+
+::: zone-end
 
 ::: zone pivot="dotnet" Теперь при запуске приложения вы должны увидеть извлеченное значение секрета.
 ::: zone-end
