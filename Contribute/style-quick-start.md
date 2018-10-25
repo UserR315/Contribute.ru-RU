@@ -2,12 +2,12 @@
 title: Краткое руководство по стилю документации
 description: Эта статья представляет собой краткое руководство по стилю документации, содержащее общие принципы для начала работы по написанию статей для сайта docs.microsoft.com.
 ms.date: 07/25/2017
-ms.openlocfilehash: 861181c7bfa22881fdd11327d19b2d7d517775c8
-ms.sourcegitcommit: 6f1997864c000a9cd25fb9171a8f8fdb8b5b5ece
+ms.openlocfilehash: f5c32d3fb71ef3513c68b9c506c823997bfe4d8f
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084406"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805601"
 ---
 # <a name="docs-style-and-voice-quick-start"></a>Краткое руководство по стилю документации
 
@@ -51,5 +51,5 @@ ms.locfileid: "49084406"
 
 - Если вы работаете с локализованной документацией, используйте [языковой портал Майкрософт](https://www.microsoft.com/Language/Default.aspx).
 - Рекомендации по локализации, инструкции по использованию стиля и языка в технической документации, а также сведения о формате данных для определенного региона см. в доступном для скачивания [руководстве по стилю](https://www.microsoft.com/Language/StyleGuides) на нужном языке.
-- Необходимо использовать локализованную [утвержденную терминологию Майкрософт для определенного продукта](https://www.microsoft.com/Language/Default.aspx). Также можно скачать [коллекцию терминов Майкрософт](https://www.microsoft.com/Language/Terminology.aspx) на нужном языке.
+- Необходимо использовать локализованную [утвержденную терминологию Майкрософт для определенного продукта](https://www.microsoft.com/Language/Default.aspx). Также можно скачать [коллекцию терминов Майкрософт](https://www.microsoft.com/language/Terminology) на нужном языке.
 - Дополнительные сведения о локализации см. в разделе "Глобализация" в [руководстве по стилю написания документации Майкрософт](https://docs.microsoft.com/style-guide/global-communications).
