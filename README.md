@@ -1,4 +1,5 @@
-# <a name="microsoft-open-source-code-of-conduct"></a>Правила поведения Майкрософт, касающиеся обращения с открытым кодом
+# <a name="microsoft-open-source-code-of-conduct"></a>Правила поведения при работе с открытым кодом, принятые в проектах корпорации Майкрософт
 
-Этот проект соответствует [правилам поведения Майкрософт, касающимся обращения с открытым кодом](https://opensource.microsoft.com/codeofconduct/).
-Дополнительные сведения см. в [Вопросах и ответах о правилах поведения](https://opensource.microsoft.com/codeofconduct/faq/). Другие вопросы и комментарии отправляйте по адресу [opencode@microsoft.com](mailto:opencode@microsoft.com).
+Этот проект придерживается [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+Если вы желаете внести вклад в этот проект, то, пожалуйста, [следуйте этим правилам](https://opensource.microsoft.com/codeofconduct/).
+Дополнительные сведения смотрите в [вопросах и ответах по правилам поведения](https://opensource.microsoft.com/codeofconduct/faq/). С любыми дополнительными вопросами или комментариями обращайтесь по адресу [opencode@microsoft.com](mailto:opencode@microsoft.com).
