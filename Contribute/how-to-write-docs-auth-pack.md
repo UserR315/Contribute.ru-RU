@@ -1,20 +1,19 @@
 ---
-title: Пакет создания документации для VS Code
-description: В этой статье описывается пакет расширений VS Code, который упрощает использование языка разметки Markdown для написания статей на сайте docs.microsoft.com.
+title: Пакет создания документации для Visual Studio Code
+description: В этой статье описывается пакет расширений Visual Studio Code, который упрощает использование языка разметки Markdown для написания статей на сайте docs.microsoft.com.
 author: meganbradley
 ms.author: mbradley
-manager: jemash
-ms.date: 04/06/2018
-ms.openlocfilehash: b9fedce0a73c5c4212ffd0893c745fab56677c8c
-ms.sourcegitcommit: 5e508a7ad2991632a38f302e4769b36e3bf37eb2
+ms.date: 10/22/2018
+ms.openlocfilehash: 00afafbbf16096ac6433c0ab276578d8d9084b51
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43308923"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805661"
 ---
 # <a name="docs-authoring-pack-for-vs-code"></a>Пакет создания документации для VS Code
 
-Пакет создания документации (Docs Authoring Pack) представляет собой набор расширений VS Code, упрощающих использование языка разметки Markdown для написания статей на сайте docs.microsoft.com. Пакет [доступен в VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) и содержит следующие расширения.
+Пакет создания документации (Docs Authoring Pack) представляет собой набор расширений Visual Studio Code, упрощающих использование языка разметки Markdown для написания статей на сайте docs.microsoft.com. Пакет [доступен в VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) и содержит следующие расширения.
 
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint). Разработанный Дэвидом Энсоном (David Anson) популярный анализатор кода Markdown для проверки соблюдения стандартов оформления кода.
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). Полностью автономное средство проверки орфографии от компании Street Side Software.
@@ -103,7 +102,7 @@ ms.locfileid: "43308923"
 |----------|---------------|
 |author    |Ваш идентификатор GitHub, если он указан в файле параметров VS Code.|
 |ms.author |Ваш псевдоним Майкрософт, если он указан в файле параметров VS Code. Если вы не сотрудник корпорации Майкрософт, его указывать не нужно.|
-|ms.date   |Текущая дата, указанная в формате, который поддерживается расширением Docs, — ММ/ДД/ГГГГ. Обратите внимание, что дата не обновляется автоматически при последовательном обновлении файла. Ее нужно обновлять вручную, чтобы указать актуальность статьи.|
+|ms.date   |Текущая дата, указанная в формате, который поддерживается расширением Docs, — ММ/ДД/ГГГГ. Обратите внимание, что дата не изменяется автоматически при следующем обновлении файла. Значение ms.date необходимо обновить вручную, чтобы указать последнюю дату публикации на сайте docs.microsoft.com.|
 
 ### <a name="to-set-author-github-id-andor-msauthor-microsoft-alias"></a>Настройка полей author (идентификатор GitHub) и (или) ms.author (псевдоним Майкрософт)
 

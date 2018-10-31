@@ -8,12 +8,12 @@ ms.date: 07/24/2018
 ms.author: cfowler
 zone_pivot_groups: keyvault-languages
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 27ebd3e348fc231d8b82e6c17f282bd9ca4afb9f
-ms.sourcegitcommit: 5e508a7ad2991632a38f302e4769b36e3bf37eb2
+ms.openlocfilehash: 497631fe46ac4e2c9c495a609547753a84d662bf
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43308831"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805753"
 ---
 # <a name="quickstart-set-and-retrieve-a-secret-from-azure-key-vault"></a>Краткое руководство. Настройка и получение секрета из Azure Key Vault
 
@@ -21,7 +21,7 @@ ms.locfileid: "43308831"
 
 > [!div class="checklist"]
 > * Создание хранилища Key Vault.
-> * Сохранение секрета в хранилище Key Vault.
+> * Сохранение секрета в Key Vault.
 > * Получение секрета из хранилища Key Vault.
 > * Создание веб-приложения Azure.
 > * [Настройка управляемых удостоверений служб](https://docs.microsoft.com/azure/active-directory/managed-service-identity/overview).
@@ -35,11 +35,14 @@ ms.locfileid: "43308831"
 ## <a name="prerequisites"></a>Предварительные требования
 
 ::: zone pivot="nodejs"
-* [Node JS](https://nodejs.org/en/) ::: zone-end ::: zone pivot="dotnet"
+* [Node.js](https://nodejs.org/en/)
+::: zone-end
+::: zone pivot="dotnet"
 * [Visual Studio 2017 начиная с версии 15.7.3](https://www.microsoft.com/net/download/windows) со следующими рабочими нагрузками:
   * ASP.NET и веб-разработка;
   * кроссплатформенная разработка .NET Core.
-* [Пакет SDK для .NET Core начиная с версии 2.1](https://www.microsoft.com/net/download/windows) :::zone-end
+* [Пакет SDK для .NET Core 2.1 или более поздней версии](https://www.microsoft.com/net/download/windows).
+::: zone-end
 * Git ([скачать](https://git-scm.com/downloads)).
 * Подписка Azure. Если у вас еще нет подписки Azure, [создайте бесплатную учетную запись Azure](https://azure.microsoft.com/free/?WT.mc_id=A261C142F), прежде чем начинать работу.
 * [Интерфейс командной строки Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) начиная с версии 2.0.4. Доступен для Windows, Mac и Linux.
@@ -110,7 +113,10 @@ git clone https://github.com/Azure-Samples/key-vault-node-quickstart.git
 
 ## <a name="install-dependencies"></a>Установка зависимостей
 
-На этом этапе мы установим зависимости. Выполните следующие команды: cd key-vault-node-quickstart npm install.
+На этом этапе мы установим зависимости. Выполните следующие команды:
+
+    cd key-vault-node-quickstart
+    npm install
 
 В этом проекте используются два модуля узла:
 
@@ -119,14 +125,14 @@ git clone https://github.com/Azure-Samples/key-vault-node-quickstart.git
 
 ## <a name="publish-the-web-application-to-azure"></a>Публикация веб-приложения в Azure
 
-Ниже приведены несколько шагов, которые нам нужно выполнить.
+Ниже приведены несколько шагов, которые нужно выполнить для публикации приложения в Azure.
 
 * Первый шаг — создание плана [Службы приложений Azure](https://azure.microsoft.com/services/app-service/). В этом плане можно хранить несколько веб-приложений.
 
     ```azurecli
     az appservice plan create --name myAppServicePlan --resource-group myResourceGroup
     ```
-* Затем нам нужно создать веб-приложение. В примере ниже замените <app_name> глобальным уникальным именем приложения (допустимые символы: a-z, 0-9 и -). В качестве среды выполнения выбрано NODE|6.9. Чтобы просмотреть все поддерживаемые среды выполнения, выполните команду az webapp list-runtimes.
+* Затем нам нужно создать веб-приложение. В примере ниже замените <app_name> глобальным уникальным именем приложения (допустимые символы: a-z, 0-9 и -). В качестве среды выполнения выбрано NODE|6.9. Список всех поддерживаемых сред выполнения можно получить с помощью команды `az webapp list-runtimes`.
 
     ```azurecli
     az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name <app_name> --runtime "NODE|6.9" --deployment-local-git
@@ -238,7 +244,8 @@ git push azure master
 
 ::: zone-end
 
-::: zone pivot="dotnet" Теперь при запуске приложения вы должны увидеть извлеченное значение секрета.
+::: zone pivot="dotnet"
+Теперь при запуске приложения должно отображаться полученное значение секрета.
 ::: zone-end
 
 ## <a name="next-steps"></a>Дальнейшие действия
@@ -247,10 +254,12 @@ git push azure master
 * [Домашняя страница Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
 * [Документация Azure Key Vault](https://docs.microsoft.com/azure/key-vault/)
 * [Пакет SDK Azure для Node.js](https://docs.microsoft.com/javascript/api/overview/azure/key-vault)
-* [Справочник по REST API в Azure](https://docs.microsoft.com/rest/api/keyvault/) ::: zone-end
+* [Справочник по REST API Azure](https://docs.microsoft.com/rest/api/keyvault/)
+::: zone-end
 
 ::: zone pivot="dotnet"
 * [Домашняя страница Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
 * [Документация Azure Key Vault](https://docs.microsoft.com/azure/key-vault/)
 * [Пакет SDK Azure для .NET](https://github.com/Azure/azure-sdk-for-net)
-* [Справочник по REST API в Azure](https://docs.microsoft.com/rest/api/keyvault/) ::: zone-end
+* [Справочник по REST API Azure](https://docs.microsoft.com/rest/api/keyvault/)
+::: zone-end

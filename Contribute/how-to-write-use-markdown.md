@@ -2,18 +2,18 @@
 title: Использование языка разметки Markdown для написания документации
 description: В этой статье приводятся базовые и справочные сведения о языке разметки Markdown, используемом для написания статей на сайте docs.microsoft.com.
 ms.date: 07/13/2017
-ms.openlocfilehash: dca1ccba2ae4ebd08b6039f5d780e7a7ac92e79f
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: 6bb8a1fa20957512addb07dda0e68abec4b0a83f
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238973"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805738"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Использование языка разметки Markdown для написания документации
 
-Статьи на сайте docs.microsoft.com написаны на [Markdown](https://daringfireball.net/projects/markdown/) — упрощенном языке разметки, который легко использовать и изучать. Благодаря своей простоте он быстро становится отраслевым стандартом.
+Статьи на сайте [docs.microsoft.com](http://docs.microsoft.com) написаны на [Markdown](https://daringfireball.net/projects/markdown/) — упрощенном языке разметки, который легко использовать и изучать. Благодаря своей простоте он быстро становится отраслевым стандартом.
 
-Так как документация хранится в репозитории GitHub, для нее можно использовать расширенный набор Markdown под названием [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/). Этот формат предусматривает дополнительные возможности для решения распространенных задач. Кроме того, службы Open Publishing Services (OPS) используют Markdig, синтаксический анализатор Markdown. Он обеспечивает высокую совместимость с диалектом GitHub Flavored Markdown (GFM), предоставляя дополнительные функции для работы с порталом Docs.
+Так как документация хранится в репозитории GitHub, для нее можно использовать расширенный набор Markdown под названием [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/). Этот формат предусматривает дополнительные возможности для решения распространенных задач. Кроме того, службы Open Publishing Services (OPS) используют Markdig, синтаксический анализатор Markdown. Он обеспечивает высокую совместимость с диалектом GFM, предоставляя дополнительные функции для работы с документацией.
 
 * Markdig — это быстрый и мощный обработчик Markdown для .NET, обеспечивающий соответствие CommonMark и поддержку расширений.
 * https://github.com/lunet-io/markdig
@@ -27,10 +27,10 @@ ms.locfileid: "36238973"
 Чтобы создать заголовок, используйте знак (#), например:
 
 ```markdown
-    # This is heading 1
-    ## This is heading 2
-    ### This is heading 3
-    #### This is heading 4
+# This is heading 1
+## This is heading 2
+### This is heading 3
+#### This is heading 4
 ```
 
 ### <a name="bold-and-italic-text"></a>Полужирное начертание и курсив
@@ -38,19 +38,19 @@ ms.locfileid: "36238973"
 Чтобы задать для текста **полужирное начертание**, заключите его в двойные звездочки:
 
 ```markdown
-    This text is **bold**.
+This text is **bold**.
 ```
 
 Чтобы задать для текста *курсивное начертание*, заключите его в одинарные звездочки:
 
 ```markdown
-    This text is *italic*.
+This text is *italic*.
 ```
 
 Чтобы задать для текста ***полужирное и курсивное*** начертание, заключите его в тройные звездочки:
 
 ```markdown
-    This is text is both ***bold and italic***.
+This is text is both ***bold and italic***.
 ```
 
 ### <a name="lists"></a>Списки
@@ -107,16 +107,16 @@ ms.locfileid: "36238973"
 
 ```markdown
 1. First instruction
-    1. Sub-instruction
-    2. Sub-instruction
+   1. Sub-instruction
+   2. Sub-instruction
 2. Second instruction
 ```
 
 будет отображаться как:
 
 1. First instruction
-    1. Sub-instruction
-    2. Sub-instruction
+   1. Sub-instruction
+   2. Sub-instruction
 2. Second instruction
 
 ### <a name="tables"></a>Tables
@@ -146,11 +146,11 @@ ms.locfileid: "36238973"
 Дополнительные сведения о создании таблиц:
 
 - [Функция обтекания таблиц](#table-wrapping) в Markdig, которая поможет при форматировании широких таблиц.
-- Статья на сайте GitHub [Organizing information with tables](https://help.github.com/articles/organizing-information-with-tables/) (Упорядочение информации при помощи таблиц).
+- Статья на сайте GitHub [Organizing information with tables](https://help.github.com/articles/organizing-information-with-tables/) (Организация информации с помощью таблиц).
 - Веб-приложение [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables).
 - Статья Адама Притчарда (Adam Pritchard) [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables) (Шпаргалка по Markdown).
 - Статья Майкла Фортина (Michel Fortin) [Markdown Extra](https://michelf.ca/projects/php-markdown/extra/#table) (Расширение Markdown Extra).
-- [Convert HTML tables to Markdown](https://jmalarcon.github.io/markdowntables/) (Преобразование таблиц HTML в Markdown)
+- [Convert HTML tables to Markdown](https://jmalarcon.github.io/markdowntables/) (Преобразование таблиц HTML в Markdown).
 
 ### <a name="links"></a>Создание ссылок
 
@@ -212,6 +212,7 @@ Markdown поддерживает как встраивание фрагмент
 |PowerShell|powershell|
 |Python|python|
 |Q#|qsharp|
+|R|r|
 |Ruby|ruby|
 |SQL|sql|
 |Swift|swift|
@@ -336,18 +337,19 @@ CREATE TABLE T1 (
 Замещающий текст, который содержит символы подчеркивания, отображается некорректно. Например, вместо
 
 ```markdown
-![ADextension_2FA_Configure_Step4] (./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
+![ADextension_2FA_Configure_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
 ```
 
 используйте следующий вариант, позволяющий избежать символов подчеркивания:
 
 ```markdown
-![ADextension\_2FA\_Configure\_Step4] (./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
+![ADextension\_2FA\_Configure\_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
 ```
 
 ### <a name="apostrophes-and-quotation-marks"></a>Апострофы и кавычки
 
-Если вы копируете текст из Word в редактор Markdown, он может содержать книжные (изогнутые) апострофы или кавычки. Их нужно заменить кодом или обычными апострофами или кавычками. В противном случае после публикации файла может отобразиться нечитаемый текст, например Itâ€™s.
+Если вы копируете текст из Word в редактор Markdown, он может содержать книжные (изогнутые) апострофы или кавычки. Их нужно заменить кодом или обычными апострофами или кавычками.
+В противном случае после публикации файла может отобразиться нечитаемый текст, например Itâ€™s.
 
 Ниже приведены кодировки для этих знаков пунктуации:
 
@@ -358,7 +360,7 @@ CREATE TABLE T1 (
 
 ### <a name="angle-brackets"></a>Угловые скобки
 
-Если в тексте файла (не в коде) используются угловые скобки (например, для обозначения заполнителя), их нужно кодировать вручную. Иначе Markdown распознает их как часть тега HTML.
+Угловые скобки, как правило, используются для обозначения заполнителя. Если вы используете угловые скобки в тексте (а не в коде), их необходимо закодировать. Иначе Markdown распознает их как часть тега HTML.
 
 Например, `<script name>` следует закодировать как `&lt;script name&gt;`.
 
@@ -369,3 +371,4 @@ CREATE TABLE T1 (
 - [Markdown: Syntax](https://daringfireball.net/projects/markdown/syntax) (Синтаксис Markdown)
 - [Markdown cheat-sheet](./media/documents/markdown-cheatsheet.pdf?raw=true) (Шпаргалка по Markdown)
 - [Базовые сведения о разметке Markdown на GitHub](https://help.github.com/articles/markdown-basics/)
+- [The Markdown Guide](https://www.markdownguide.org/) (Руководство по Markdown)
