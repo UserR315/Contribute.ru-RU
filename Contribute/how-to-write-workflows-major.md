@@ -2,12 +2,12 @@
 title: Рабочий процесс по внесению значительных или времязатратных изменений на сайте GitHub
 description: В этой статье описан рабочий процесс по внесению значительных изменений в статьи на сайте docs.microsoft.com.
 ms.date: 08/30/2017
-ms.openlocfilehash: 31f9421fc5edbc2f65c5ff20a86da08c70211ec7
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: 93e659df4f72c6a272d15fd7487eb3a997bdf3c8
+ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36239832"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609413"
 ---
 # <a name="github-contribution-workflow-for-major-or-long-running-changes"></a>Рабочий процесс по внесению значительных или времязатратных изменений на сайте GitHub
 

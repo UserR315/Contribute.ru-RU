@@ -11,6 +11,11 @@
 ## [Краткое руководство по стилю](style-quick-start.md)
 ## [Ссылки](how-to-write-links.md)
 ## [Пакет создания документации](how-to-write-docs-auth-pack.md)
+# Руководство по конкретной документации
+## [Документация по .NET](dotnet-contribute.md)
+### [Участие в разработке документации по .NET](dotnet-contribute-process.md)
+### [Соглашения о стиле для документации по .NET](dotnet-style-guide.md)
+### [Рекомендации по стилю](dotnet-voice-tone.md)
 
 <!--
 ## Creating new content

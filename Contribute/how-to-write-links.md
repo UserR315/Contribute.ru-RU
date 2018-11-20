@@ -1,13 +1,15 @@
 ---
 title: Использование ссылок в документации
 description: В этой статье содержатся инструкции по созданию ссылок на содержимое на сайте docs.microsoft.com.
-ms.date: 06/29/2017
-ms.openlocfilehash: 1820ed9af561964d7afe0b29827ee43526c72489
-ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
+author: gewarren
+ms.author: gewarren
+ms.date: 10/31/2018
+ms.openlocfilehash: e56bc0fe3a5428af2a79641a8959b4da21270d53
+ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49805776"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609437"
 ---
 # <a name="using-links-in-documentation"></a>Использование ссылок в документации
 В этой статье описывается использование гиперссылок со страниц, размещенных на сайте docs.microsoft.com. Добавление ссылок в Markdown не представляет труда, но следует придерживаться ряда определенных правил. Ссылки могут указывать на содержимое на той же странице, на соседних страницах или вести на внешние сайты и URL-адреса.
@@ -22,7 +24,7 @@ ms.locfileid: "49805776"
 Фраза для ссылки должна быть понятной. Иными словами, это должен быть полноценный текст или название страницы, на которую указывает ссылка.
 
 > [!IMPORTANT]
-> Не используйте конструкцию "щелкните здесь". Она плохо сказывается на SEO-оптимизации и не дает адекватного представления о целевой странице.
+> Не используйте конструкцию "щелкните здесь". Она плохо сказывается на оптимизации для поисковых систем и не дает адекватного представления о целевой странице.
 
 **Правильно:**
 
@@ -56,7 +58,7 @@ ms.locfileid: "49805776"
 
   `[link text](../directory/article-name.md)`
 
-- Для статьи, ссылка на которую добавляется в разные docset (даже в рамках одного репозитория): `[link text](./directory/article-name)`
+- Для статьи, ссылка на которую добавляется в разные docset (даже в рамках одного репозитория):  `[link text](./directory/article-name)`
 
 > [!IMPORTANT]
 > Ни в одном из примеров выше `~/` не используется в качестве части ссылки. Если вы ссылаетесь на путь в корне репозитория, начните с `/`. Добавление `~/` приведет к формированию недопустимых ссылок при навигации по репозиториям исходного кода на GitHub. Если начать путь с `/`, разрешение происходит успешно.
@@ -84,17 +86,23 @@ ms.locfileid: "49805776"
 
 Включаемые файлы содержатся в другом каталоге, поэтому для них используются более длинные относительные пути. Чтобы добавить ссылку на статью во включаемый файл, используйте следующий формат:
 
-    [link text](../articles/folder/article-name.md)
+   ```markdown
+   [link text](../articles/folder/article-name.md)
+   ```
 
 ## <a name="links-in-selectors"></a>Ссылки в селекторах
 
-Если во включаемый файл внедрены селекторы, как в документации Azure, используйте следующую структуру ссылки:
+Селектор — это компонент навигации, который отображается в статье в документации как раскрывающийся список. Когда читатель выбирает значение в раскрывающемся списке, браузер открывает выбранную статью. Обычно список в селекторе содержит ссылки на связанные статьи, например, та же тема на разных языках программирования или тесно связанная серия статей. 
 
-    > [AZURE.SELECTOR-LIST (Dropdown1 | Dropdown2 )]
-    - [(Text1 | Example1 )](../articles/folder/article-name1.md)
-    - [(Text1 | Example2 )](../articles/folder/article-name2.md)
-    - [(Text2 | Example3 )](../articles/folder/article-name3.md)
-    - [(Text2 | Example4 )](../articles/folder/article-name4.md) -->
+Если во включаемый файл внедрены селекторы, используйте следующую структуру ссылки:
+
+   ```markdown
+   > [AZURE.SELECTOR-LIST (Dropdown1 | Dropdown2 )]
+   - [(Text1 | Example1 )](../articles/folder/article-name1.md)
+   - [(Text1 | Example2 )](../articles/folder/article-name2.md)
+   - [(Text2 | Example3 )](../articles/folder/article-name3.md)
+   - [(Text2 | Example4 )](../articles/folder/article-name4.md) -->
+   ```
 
 ## <a name="reference-style-links"></a>Ссылки типа сносок
 
@@ -102,23 +110,29 @@ ms.locfileid: "49805776"
 
 Встроенный текст:
 
-    I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].
+   ```markdown
+   I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].
+   ```
 
 Ссылки типа сносок в конце статьи:
 
-    <!--Reference links in article-->
-    [1]: http://google.com/
-    [2]: http://search.yahoo.com/
-    [3]: http://search.msn.com/
-
+   ```markdown
+   <!--Reference links in article-->
+   [1]: http://google.com/
+   [2]: http://search.yahoo.com/
+   [3]: http://search.msn.com/
+   ```
+   
 Обязательно используйте пробел после двоеточия перед ссылкой. Если при добавлении ссылок на другие технические статьи вы забудете включить пробел, ссылка не будет работать в опубликованной статье.
 
 ## <a name="links-to-pages-that-are-not-part-of-the-technical-documentation-set"></a>Ссылки на страницы, не являющиеся частью технической документации
 
 Чтобы добавить ссылку на страницу корпорации Майкрософт другого характера (например, на страницу с ценами, страницу соглашения об уровне обслуживания или любую другую страницу, не являющуюся статьей документации), используйте абсолютный URL-адрес без указания языка. Такие ссылки работают на сайте GitHub и на отображаемом сайте:
 
-    [link text](https://azure.microsoft.com/pricing/details/virtual-machines/)
-
+   ```markdown
+   [link text](https://azure.microsoft.com/pricing/details/virtual-machines/)
+   ```
+   
 ## <a name="links-to-third-party-sites"></a>Ссылки на сторонние сайты
 
 Лучше избегать перенаправления пользователей на другие сайты. Но иногда это необходимо. При размещении ссылок на сторонние сайты руководствуйтесь следующей информацией:
@@ -146,7 +160,7 @@ ms.locfileid: "49805776"
   - `/powershell/azure/<topic-file-name>[?view=<moniker-name>]`
   - `/powershell/azure/<service-name>/<topic-file-name>[?view=<moniker-name>]`
 
-Часть &lt;moniker-name&gt; является необязательной. Если ее исключить, пользователь будет направлен к последней версии содержимого. Для части &lt;service-name&gt; можно задать одно из значений в примерах базовых URL-адресов ниже:
+Часть `<moniker-name>` не обязательна. Если ее исключить, пользователь будет направлен к последней версии содержимого. Часть `<service-name>` — это один из примеров базовых URL-адресов ниже:
 
 - Содержимое Azure PowerShell (AzureRM): [https://docs.microsoft.com/powershell/azure/](https://docs.microsoft.com/powershell/azure/)
 - Содержимое Azure PowerShell (ASM) : [https://docs.microsoft.com/powershell/azure/_servicemanagement_](https://docs.microsoft.com/powershell/azure/servicemanagement)

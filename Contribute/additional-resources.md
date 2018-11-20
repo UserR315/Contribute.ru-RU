@@ -4,12 +4,12 @@ description: В этой статье приводятся предлагаем�
 author: billwagner
 ms.author: wiwagn
 manager: wpickett
-ms.openlocfilehash: d45e395c19a0619e0c73f7ad0a3858e0e48098c6
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: bf12947d0956a5ee2953d74840afe3060425074d
+ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36239587"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609575"
 ---
 # <a name="additional-git-and-github-resources"></a>Дополнительные ресурсы по Git и GitHub
 
@@ -20,8 +20,9 @@ ms.locfileid: "36239587"
 - [Основы Git](https://go.microsoft.com/fwlink/?linkid=853939) — это общий обзор принципов работы Git.
 - [Электронная книга Pro Git (веб-версия)](https://go.microsoft.com/fwlink/?linkid=853940) — подробный справочник по Git в формате HTML
 - [Электронная книга Pro Git (PDF)](https://progit2.s3.amazonaws.com/en/2016-03-22-f3531/progit-en.1084.pdf) — этот же справочник в формате PDF.
-- [Учебный курс по Git от Codeacademy](https://www.codecademy.com/learn/learn-git): руководство по Git от Codeacademy.
+- [Учебный курс по Git от Codecademy](https://www.codecademy.com/learn/learn-git): руководство по Git от Codecademy.
 - [Учебный курс по Git от Code School](https://www.codeschool.com/courses/try-git): руководство по Git от Code School.
+- [Курс по Git и Github от Udacity](https://www.udacity.com/course/how-to-use-git-and-github--ud775): руководство по Git и Github от Udacity
 
 ## <a name="github-resources"></a>Ресурсы, связанные с GitHub
 
@@ -31,3 +32,4 @@ ms.locfileid: "36239587"
 - [Ресурсы, связанные с изучением GitHub](https://help.github.com/articles/git-and-github-learning-resources/) — другие полезные материалы по GitHub.
 - [Услуги по обучению GitHub](https://services.github.com/training/) — список руководств и предложений по обучению GitHub.
 - [Глоссарий](https://help.github.com/articles/github-glossary) — удобный глоссарий терминов Git и GitHub.
+- [Пакет разработчика GitHub Student](https://education.github.com/pack): предоставляет учащимся бесплатный доступ к лучшим средствам разработчика.
