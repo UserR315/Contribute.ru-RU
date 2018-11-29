@@ -16,6 +16,7 @@
 ### [Участие в разработке документации по .NET](dotnet-contribute-process.md)
 ### [Соглашения о стиле для документации по .NET](dotnet-style-guide.md)
 ### [Рекомендации по стилю](dotnet-voice-tone.md)
+# [Дополнительные ресурсы](additional-resources.md)
 
 <!--
 ## Creating new content
@@ -79,4 +80,3 @@
 
      Open question: How to keep this up to date?
    -->
-## [Дополнительные ресурсы](additional-resources.md)
