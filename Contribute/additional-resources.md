@@ -4,12 +4,12 @@ description: В этой статье приводятся предлагаем�
 author: billwagner
 ms.author: wiwagn
 manager: wpickett
-ms.openlocfilehash: bf12947d0956a5ee2953d74840afe3060425074d
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 4c29bfd09f17e32624ee3fc484424c4fe8d3b68e
+ms.sourcegitcommit: 68d81b61ffa60aba16acfed023760449e16de91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609575"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52299644"
 ---
 # <a name="additional-git-and-github-resources"></a>Дополнительные ресурсы по Git и GitHub
 
@@ -20,8 +20,8 @@ ms.locfileid: "51609575"
 - [Основы Git](https://go.microsoft.com/fwlink/?linkid=853939) — это общий обзор принципов работы Git.
 - [Электронная книга Pro Git (веб-версия)](https://go.microsoft.com/fwlink/?linkid=853940) — подробный справочник по Git в формате HTML
 - [Электронная книга Pro Git (PDF)](https://progit2.s3.amazonaws.com/en/2016-03-22-f3531/progit-en.1084.pdf) — этот же справочник в формате PDF.
-- [Учебный курс по Git от Codecademy](https://www.codecademy.com/learn/learn-git): руководство по Git от Codecademy.
-- [Учебный курс по Git от Code School](https://www.codeschool.com/courses/try-git): руководство по Git от Code School.
+- [Учебный курс по Git от Codeacademy](https://www.codecademy.com/learn/learn-git): руководство по Git от Codeacademy.
+- [Учебный курс по Git от Code School на Pluralsight](https://www.pluralsight.com/courses/code-school-git-real): руководство по Git от Code School на Pluralsight.
 - [Курс по Git и Github от Udacity](https://www.udacity.com/course/how-to-use-git-and-github--ud775): руководство по Git и Github от Udacity
 
 ## <a name="github-resources"></a>Ресурсы, связанные с GitHub
