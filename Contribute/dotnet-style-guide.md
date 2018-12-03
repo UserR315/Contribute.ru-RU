@@ -2,12 +2,12 @@
 title: Шаблон и подсказки для статей о .NET
 description: В этой статье приводится удобный шаблон написания статей для репозиториев с документацией по .NET
 ms.date: 11/07/2018
-ms.openlocfilehash: 8980f5e39213d8f2edd1d29e66d900f2c3d04bbc
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 15f64ec86c475e2da2f6539c8f388d076389c4e0
+ms.sourcegitcommit: 68d81b61ffa60aba16acfed023760449e16de91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609746"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52299667"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>Шаблон метаданных и Markdown для документации .NET
 
@@ -79,9 +79,11 @@ Markdown использует для форматирования специал
 - В большинстве случаев мы используем относительные ссылки и не рекомендуем использовать `~/` в ссылках, поскольку относительные ссылки разрешаются в источнике на GitHub. Но если мы размещаем ссылку на файл в зависимом репозитории, мы используем символ `~/`, чтобы указать путь. Поскольку файлы в зависимом репозитории располагаются в другом месте на GitHub, ссылки не будут корректно разрешаться при использовании относительных ссылок, как бы они ни были записаны.
 - Спецификации языка C# и Visual Basic включены в документацию .NET путем включения источника из репозиториев этих языков. Источники Markdown управляются в репозиториях [csharplang](https://github.com/dotnet/csharplang) и [vblang](https://github.com/dotnet/vblang).
 
-Ссылки на спецификации должны указывать на исходные каталоги, содержащие эти спецификации. Для C# это **~/_csharplang/spec**, а для VB — **~/_vblang/spec**.
+Ссылки на спецификации должны указывать на исходные каталоги, содержащие эти спецификации. Для C# это **~/_csharplang/spec**, а для VB — **~/_vblang/spec**, как в следующем примере:
 
-- Пример: `[C# Query Expressions](~/_csharplang/spec/expressions.md#query-expressions)`
+```markdown
+[C# Query Expressions](~/_csharplang/spec/expressions.md#query-expressions)
+```
 
 ### <a name="links-to-apis"></a>Ссылки на API
 
@@ -111,13 +113,13 @@ Markdown использует для форматирования специал
 - System.Exception.\#ctor заменяется на `System.Exception.%23ctor`;
 - System.Lazy\`1.\#ctor(System.Threading.LazyThreadSafetyMode) заменяется на `System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29`.
 
-UID для типов, список перегрузки членов или конкретный перегруженный член можно найти в `https://xref.docs.microsoft.com/autocomplete`. Строка запроса "?text=*\<type-member-name>*" определяет тип или член, UID которого вы хотите увидеть. Например, `https://xref.docs.microsoft.com/autocomplete?text=string.format` извлекает перегрузки [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format). Инструмент ищет предоставленный параметр запроса `text` в любой части UID. Например, вы можете искать имя члена (ToString), частичное имя члена (ToStri), тип и имя члена (Double.ToString) и т. д.
+UID для типов, список перегрузки членов или конкретный перегруженный член можно найти в `https://xref.docs.microsoft.com/autocomplete`. Строка запроса `?text=*\<type-member-name>*` определяет тип или элемент, UID которых вы хотите увидеть. Например, `https://xref.docs.microsoft.com/autocomplete?text=string.format` извлекает перегрузки [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format). Инструмент ищет предоставленный параметр запроса `text` в любой части UID. Например, вы можете искать имя члена (ToString), частичное имя члена (ToStri), тип и имя члена (Double.ToString) и т. д.
 
-Если добавить символ \* (или %2A) после UID, ссылка будет вести на страницу перегрузки, а не к конкретному API. Например, этот символ можно использовать, если требуется создать ссылку на страницу [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) обычным способом, а не на конкретную перегрузку, например [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_). Также можно использовать \* для ссылки на страницу члена, если этот член не перегружен. Это позволит не включать список параметров в UID.
+Если добавить символ \* (или `%2A`) после UID, ссылка будет представлять страницу перегрузки, а не конкретный API. Например, этот символ можно использовать, если требуется создать ссылку на страницу [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) обычным способом, а не на конкретную перегрузку, например [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_). Также можно использовать \* для ссылки на страницу члена, если этот член не перегружен. Это позволит не включать список параметров в UID.
 
 Чтобы сослаться на конкретную перегрузку метода, включите полное имя типа каждого параметра метода. Например, \<xref:System.DateTime.ToString> ведет к методу [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) без параметров, а \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> ведет к методу [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_).
 
-Чтобы сослаться на универсальный тип, например [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), используйте символ \` (%60), а за ним количество параметров универсального типа. Например, \<xref:System.Nullable%601> ведет к типу [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), а \<xref:System.Func%602> ведет к делегату [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
+Чтобы сослаться на универсальный тип, например [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), используйте символ \` (`%60`) с указанием числа параметров универсального типа. Например, `<xref:System.Nullable%601>` ссылается на тип [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), а `<xref:System.Func%602>` — на делегат [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
 
 ## <a name="code"></a>Код
 
