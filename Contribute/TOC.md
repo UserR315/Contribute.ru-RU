@@ -16,6 +16,7 @@
 ### [Участие в разработке документации по .NET](dotnet-contribute-process.md)
 ### [Соглашения о стиле для документации по .NET](dotnet-style-guide.md)
 ### [Рекомендации по стилю](dotnet-voice-tone.md)
+### [Обзор запросов на вытягивание](dotnet-pr-review.md)
 # [Дополнительные ресурсы](additional-resources.md)
 
 <!--
