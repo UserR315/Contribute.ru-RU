@@ -1,24 +1,19 @@
 ---
 title: Использование языка разметки Markdown для написания документации
 description: В этой статье приводятся базовые и справочные сведения о языке разметки Markdown, используемом для написания статей на сайте docs.microsoft.com.
-ms.date: 07/13/2017
-ms.openlocfilehash: ef75ffd59b75db5757822642f651d863906cf14c
-ms.sourcegitcommit: 18c271ebec920bb976a4bc901f4ab8c1d36b02fa
+ms.date: 01/29/2019
+ms.openlocfilehash: 5235189d11c8c20ac20c91572d8bafcf525fb7c0
+ms.sourcegitcommit: fbdd61ae4fb3761aec072732eefcbf2c2dca8011
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53615842"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55887305"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Использование языка разметки Markdown для написания документации
 
 Статьи на сайте [docs.microsoft.com](http://docs.microsoft.com) написаны на [Markdown](https://daringfireball.net/projects/markdown/) — упрощенном языке разметки, который легко использовать и изучать. Благодаря своей простоте он быстро становится отраслевым стандартом.
 
-Так как документация хранится в репозитории GitHub, для нее можно использовать расширенный набор Markdown под названием [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/). Этот формат предусматривает дополнительные возможности для решения распространенных задач. Кроме того, службы Open Publishing Services (OPS) используют Markdig, синтаксический анализатор Markdown. Он обеспечивает высокую совместимость с диалектом GFM, предоставляя дополнительные функции для работы с документацией.
-
-* Markdig — это быстрый и мощный обработчик Markdown для .NET, обеспечивающий соответствие CommonMark и поддержку расширений.
-* https://github.com/lunet-io/markdig
-* Улучшенная поддержка сообщества
-* Улучшенная поддержка стандартов
+Серверная часть сайта docs.microsoft.com использует службы Open Publishing Services (OPS), поддерживающие разметку, совместимую с [CommonMark](https://commonmark.org/), проанализированную через [Markdig](https://github.com/lunet-io/markdig), а также [DocFX Flavored Markdown (DFM)](https://dotnet.github.io/docfx/). Большая часть этих типов разметки совместима с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
 
 ## <a name="markdown-basics"></a>Базовые сведения о Markdown
 
@@ -220,6 +215,7 @@ Markdown поддерживает как встраивание фрагмент
 |Консоль|консоль|
 |CSHTML|cshtml|
 |DAX|dax|
+|Docker|dockerfile|
 |F#|fsharp|
 |Go|go|
 |HTML|html|
@@ -227,8 +223,8 @@ Markdown поддерживает как встраивание фрагмент
 |Java|java|
 |JavaScript|javascript|
 |JSON|json|
+|Язык запросов Kusto|kusto|
 |Markdown|md|
-|NodeJS|nodejs|
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
@@ -243,7 +239,6 @@ Markdown поддерживает как встраивание фрагмент
 |Swift|swift|
 |TypeScript|typescript|
 |VB|vb|
-|VSTS CLI|vstscli|
 |XAML|xaml|
 |XML|xml|
 
