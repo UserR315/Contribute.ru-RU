@@ -4,7 +4,7 @@
       "docset_name": "ContributionGuide",
       "build_source_folder": "Contribute",
       "build_output_subfolder": "ContributionGuide",
-      "locale": "ru-RU",
+      "locale": "ru-ru",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": true,
@@ -34,7 +34,7 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.ru-RU",
+      "url": "https://github.com/Microsoft/templates.docs.msft.ru-ru",
       "branch": "master",
       "branch_mapping": {}
     },
