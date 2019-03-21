@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 2/19/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: e7b10f3f146ee33cd00bcd31d16b01e8d99f7134
-ms.sourcegitcommit: f374ad2607360f46d88982b4b7ecc63d3ab08235
+ms.openlocfilehash: 8fdb09cb09a6be7e94490c0e3b6744c3ecb97d25
+ms.sourcegitcommit: 42e5a6ae071826afc2a32a9b7150ca113b39afdf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56431730"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57987751"
 ---
 # <a name="ms-topic-invalid"></a>ms-topic-invalid
 
@@ -27,7 +27,7 @@ ms.locfileid: "56431730"
 
 Добавьте допустимое значение для `ms.topic`, которое указывает на тип статьи.
 
-Допустимые значения можно найти на [этом внутреннем сайте корпорации Майкрософт](https://docsmetadatatool.azurewebsites.net/whitelists).
+Допустимые значения можно найти на [этом внутреннем сайте корпорации Майкрософт](https://docsmetadatatool.azurewebsites.net/allowlists).
 
 <!--make sure to add this file to your includes folder and verify the path-->
 [!INCLUDE [validation-reference-help](includes/validation-reference-help.md)]
