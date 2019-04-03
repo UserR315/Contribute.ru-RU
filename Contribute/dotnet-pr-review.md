@@ -1,13 +1,13 @@
 ---
 title: Обзор запросов на вытягивание документов .NET
 description: В документации .NET не включены веб-перехватчики для объединения запросов на вытягивание. В этой статье описывается процесс запросов на вытягивание для таких репозиториев.
-ms.date: 01/-4/2019
-ms.openlocfilehash: d8f35e328beffcbd5bac9f0f7313d8127fbeffb0
-ms.sourcegitcommit: 203ca15fda2d217f082c74ec648c1f1db323f9f1
+ms.date: 01/04/2019
+ms.openlocfilehash: f710e330e31e56887d43030290d5aa6a5c62961b
+ms.sourcegitcommit: af37d44eb67daa2841959817cd205ec95db18cec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55713575"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653604"
 ---
 # <a name="pull-request-review-process-for-the-net-docs-repositories"></a>Процесс проверки запроса на вытягивание для репозиториев документации .NET
 
