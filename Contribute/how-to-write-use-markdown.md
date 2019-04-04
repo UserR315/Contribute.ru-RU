@@ -1,19 +1,18 @@
 ---
 title: Использование языка разметки Markdown для написания документации
 description: В этой статье приводятся базовые и справочные сведения о языке разметки Markdown, используемом для написания статей на сайте docs.microsoft.com.
-ms.date: 01/29/2019
-ms.openlocfilehash: 5235189d11c8c20ac20c91572d8bafcf525fb7c0
-ms.sourcegitcommit: fbdd61ae4fb3761aec072732eefcbf2c2dca8011
+ms.date: 03/26/2019
+ms.openlocfilehash: eeb49961fbf530676b55ae4e42d4fca7b8d7edf7
+ms.sourcegitcommit: 8e897e90268a8a87dc4b97d7c28d22ed5950c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55887305"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58637490"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Использование языка разметки Markdown для написания документации
 
-Статьи на сайте [docs.microsoft.com](http://docs.microsoft.com) написаны на [Markdown](https://daringfireball.net/projects/markdown/) — упрощенном языке разметки, который легко использовать и изучать. Благодаря своей простоте он быстро становится отраслевым стандартом.
+Статьи на сайте [docs.microsoft.com](http://docs.microsoft.com) написаны на [Markdown](https://daringfireball.net/projects/markdown/) — упрощенном языке разметки, который легко использовать и изучать. Благодаря своей простоте он быстро становится отраслевым стандартом. Для документов сайта используется [тип Markdig](#markdown-flavor) разметки Markdown.
 
-Серверная часть сайта docs.microsoft.com использует службы Open Publishing Services (OPS), поддерживающие разметку, совместимую с [CommonMark](https://commonmark.org/), проанализированную через [Markdig](https://github.com/lunet-io/markdig), а также [DocFX Flavored Markdown (DFM)](https://dotnet.github.io/docfx/). Большая часть этих типов разметки совместима с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
 
 ## <a name="markdown-basics"></a>Базовые сведения о Markdown
 
@@ -162,7 +161,6 @@ This is text is both ***bold and italic***.
 
 Дополнительные сведения о создании таблиц:
 
-- [Функция обтекания таблиц](#table-wrapping) в Markdig, которая поможет при форматировании широких таблиц.
 - Статья на сайте GitHub [Organizing information with tables](https://help.github.com/articles/organizing-information-with-tables/) (Организация информации с помощью таблиц).
 - Веб-приложение [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables).
 - Статья Адама Притчарда (Adam Pritchard) [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables) (Шпаргалка по Markdown).
@@ -207,6 +205,7 @@ Markdown поддерживает как встраивание фрагмент
 |AzCopy|azcopy|
 |Azure CLI|azurecli|
 |Azure PowerShell|azurepowershell|
+|Bash|Bash|
 |C++|cpp|
 |C++/CX|cppcx|
 |C++/WinRT|cppwinrt|
@@ -430,6 +429,10 @@ CREATE TABLE T1 (
 Угловые скобки, как правило, используются для обозначения заполнителя. Если вы используете угловые скобки в тексте (а не в коде), их необходимо закодировать. Иначе Markdown распознает их как часть тега HTML.
 
 Например, `<script name>` следует закодировать как `&lt;script name&gt;`.
+
+## <a name="markdown-flavor"></a>Тип разметки Markdown
+
+Серверная часть сайта docs.microsoft.com использует службы Open Publishing Services (OPS), поддерживающие разметку, совместимую с [CommonMark](https://commonmark.org/), проанализированную через подсистему синтаксического анализа [Markdig](https://github.com/lunet-io/markdig). Такой тип разметки совместим с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
 
 ## <a name="see-also"></a>Дополнительные материалы
 
