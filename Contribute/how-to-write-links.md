@@ -4,17 +4,17 @@ description: В этой статье содержатся инструкции 
 author: gewarren
 ms.author: gewarren
 ms.date: 10/31/2018
-ms.openlocfilehash: 9dc1b6dc2ac19b8f28a5a137817245f9a8c34eaf
-ms.sourcegitcommit: fbdd61ae4fb3761aec072732eefcbf2c2dca8011
+ms.openlocfilehash: 464c6b2ae8976252828d73390f9cbeea67f4e3ce
+ms.sourcegitcommit: 8e897e90268a8a87dc4b97d7c28d22ed5950c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55887259"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58637559"
 ---
 # <a name="using-links-in-documentation"></a>Использование ссылок в документации
 В этой статье описывается использование гиперссылок со страниц, размещенных на сайте docs.microsoft.com. Добавление ссылок в Markdown не представляет труда, но следует придерживаться ряда определенных правил. Ссылки могут указывать на содержимое на той же странице, на соседних страницах или вести на внешние сайты и URL-адреса.
 
-Серверная часть сайта docs.microsoft.com использует службы Open Publishing Services (OPS), поддерживающие разметку, совместимую с [CommonMark](https://commonmark.org/), проанализированную через [Markdig](https://github.com/lunet-io/markdig), а также [DocFX Flavored Markdown (DFM)](https://dotnet.github.io/docfx/). Большая часть этих типов разметки совместима с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
+Серверная часть сайта docs.microsoft.com использует службы Open Publishing Services (OPS), поддерживающие разметку, совместимую с [CommonMark](https://commonmark.org/), проанализированную через подсистему синтаксического анализа [Markdig](https://github.com/lunet-io/markdig). Такой тип разметки совместим с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
 
 > [!IMPORTANT]
 > Все ссылки должны быть безопасными (с протоколом `https` вместо `http`), если целевой объект поддерживает такой протокол (большинство целевых объектов поддерживают).
