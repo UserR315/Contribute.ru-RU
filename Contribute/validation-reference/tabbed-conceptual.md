@@ -1,11 +1,12 @@
 ---
 ms.date: 03/29/2019
-ms.openlocfilehash: 4e07ecf777f1361e21343b7b80f59ad9c5e86b3e
-ms.sourcegitcommit: af37d44eb67daa2841959817cd205ec95db18cec
+title: Элемент с вкладками
+ms.openlocfilehash: 3d6f38c1659297182a8bd50bf52b9853bd21b2c8
+ms.sourcegitcommit: 1e53d17639277bebd89b2e7cabeb45bdad526354
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653420"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "66841303"
 ---
 # <a name="tabbed-conceptual"></a>Элемент с вкладками
 

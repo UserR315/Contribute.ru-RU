@@ -2,12 +2,13 @@
 author: meganbradley
 ms.author: mbradley
 ms.date: 03/29/2019
-ms.openlocfilehash: a3b383021046412620c616882b19cb06f4dc59f8
-ms.sourcegitcommit: af37d44eb67daa2841959817cd205ec95db18cec
+title: Зависящие от языкового стандарта ссылки
+ms.openlocfilehash: f42a26da45b48972bfc595cb26c67ab0acfe8603
+ms.sourcegitcommit: 1e53d17639277bebd89b2e7cabeb45bdad526354
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653558"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "66841245"
 ---
 # <a name="locale-specific-links"></a>Зависящие от языкового стандарта ссылки
 
