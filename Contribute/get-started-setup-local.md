@@ -4,12 +4,12 @@ description: В этой статье приводятся инструкции 
 author: jasonwhowell
 ms.author: jasonh
 ms.date: 01/18/2018
-ms.openlocfilehash: 5373bf34399105c15caabe0abdc1ea0692c46a4a
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 1053900b0af5a0ea3dec99ccd27114f16b828406
+ms.sourcegitcommit: c6a5a715af1b915ecd4ef64d40f7d18c6035c858
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609506"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68669907"
 ---
 # <a name="set-up-git-repository-locally-for-documentation"></a>Локальная настройка репозитория Git для документации
 
@@ -55,6 +55,7 @@ ms.locfileid: "51609506"
    - Документация по Visual Studio [https://github.com/MicrosoftDocs/visualstudio-docs](https://github.com/MicrosoftDocs/visualstudio-docs)
    - Документация по .NET [https://github.com/dotnet/docs](https://github.com/dotnet/docs)
    - Документация к пакету Azure SDK для .NET [https://github.com/azure/azure-docs-sdk-dotnet](https://github.com/azure/azure-docs-sdk-dotnet)
+   - Документация по ConfigMgr [https://github.com/MicrosoftDocs/SCCMdocs ] (https://github.com/MicrosoftDocs/SCCMdocs/)
 
 ## <a name="fork-the-repository"></a>Создание вилки репозитория
 Используя соответствующий репозиторий, создайте его вилку в своей учетной записи GitHub на сайте GitHub.
