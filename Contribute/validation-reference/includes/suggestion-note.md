@@ -1,12 +1,12 @@
 ---
 author: meganbradley
 ms.author: mbradley
-ms.openlocfilehash: 97a5e8df1fbac10119a1bed7f979ad424db1cab0
-ms.sourcegitcommit: 4053577bd0478d711257a283ee661d618b49c2df
+ms.openlocfilehash: 22d9b3b13856e978aa5b8a902f27e460293e0bd0
+ms.sourcegitcommit: 495d49f10df51a8897687940aa653e906c48c2a0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57458012"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68819720"
 ---
 > [!IMPORTANT]
-> <span data-ttu-id="69651-101">Это правило изначально использовалось в качестве предложения, чтобы команды по созданию содержимого могли получить время на оценку влияния и разработать план по очистке своих репозиториев.</span><span class="sxs-lookup"><span data-stu-id="69651-101">This rule is initially enabled as a "Suggestion" to give content teams time to gauge impact and develop a plan to clean up their repos.</span></span> <span data-ttu-id="69651-102">Предложения не требуют немедленных действий. Однако необходимо как можно скорее принять меры, так как в какой-то момент их уровень будет повышен до предупреждений или ошибок.</span><span class="sxs-lookup"><span data-stu-id="69651-102">Suggestions don't require immediate action, but you should fix them as soon as possible because at some point they will be elevated to Warnings or Errors.</span></span> <span data-ttu-id="69651-103">Сведения о времени изменения уровня серьезности и о том, какой уровень будет выбран, будут включены в сообщение, когда оно станет доступно.</span><span class="sxs-lookup"><span data-stu-id="69651-103">Details about when the severity will change and to what will be included in the message when available.</span></span>
+> <span data-ttu-id="48af6-101">Это правило изначально использовалось как "Предложение", чтобы дать командам по работе с содержимым время на оценку возможных последствий и разработку плана по очистке своих репозиториев.</span><span class="sxs-lookup"><span data-stu-id="48af6-101">This rule was initially enabled as a "Suggestion" to give content teams time to gauge impact and develop a plan to clean up their repos.</span></span> <span data-ttu-id="48af6-102">**Его статус будет повышен до "Предупреждения" с 1 сентября 2019 г**.</span><span class="sxs-lookup"><span data-stu-id="48af6-102">**It will be elevated to a "Warning" on 9/1/2019**.</span></span>
