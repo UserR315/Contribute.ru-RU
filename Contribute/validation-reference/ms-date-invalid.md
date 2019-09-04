@@ -6,24 +6,22 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 1/15/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: 22b903c2a670124c272fc5b1e26088c516ded306
-ms.sourcegitcommit: 8e897e90268a8a87dc4b97d7c28d22ed5950c8d9
+ms.openlocfilehash: 2f34a0e510d7d006c598ae163217a117a72f1de2
+ms.sourcegitcommit: dd751d0cb5b11f81a64ef62f3c83fd17cc5f0541
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58637421"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70236160"
 ---
-# <a name="ms-date-invalid"></a><span data-ttu-id="40561-103">ms-date-invalid</span><span class="sxs-lookup"><span data-stu-id="40561-103">ms-date-invalid</span></span>
+# <a name="ms-date-invalid"></a><span data-ttu-id="b3224-103">ms-date-invalid</span><span class="sxs-lookup"><span data-stu-id="b3224-103">ms-date-invalid</span></span>
 
-[!INCLUDE [suggestion-note](includes/suggestion-note.md)]
-
-## <a name="suggestion"></a><span data-ttu-id="40561-104">Предложение</span><span class="sxs-lookup"><span data-stu-id="40561-104">Suggestion</span></span>
+## <a name="warning"></a><span data-ttu-id="b3224-104">Предупреждение</span><span class="sxs-lookup"><span data-stu-id="b3224-104">Warning</span></span>
 
 `Invalid value for ms.date: '{value}'. Must be a date in format MM/DD/YYYY.`
 
-## <a name="resolution"></a><span data-ttu-id="40561-105">Способы устранения</span><span class="sxs-lookup"><span data-stu-id="40561-105">Resolution</span></span>
+## <a name="resolution"></a><span data-ttu-id="b3224-105">Способы устранения</span><span class="sxs-lookup"><span data-stu-id="b3224-105">Resolution</span></span>
 
-<span data-ttu-id="40561-106">Убедитесь, что статья актуальна и в ней отсутствует испорченное содержимое, и добавьте допустимую дату в формате ММ/ДД/ГГГГ.</span><span class="sxs-lookup"><span data-stu-id="40561-106">Confirm that the article is up-to-date with no broken content, then add a valid date in the format MM/DD/YYYY:</span></span>
+<span data-ttu-id="b3224-106">Убедитесь, что статья актуальна и в ней отсутствует испорченное содержимое, и добавьте допустимую дату в формате ММ/ДД/ГГГГ.</span><span class="sxs-lookup"><span data-stu-id="b3224-106">Confirm that the article is up-to-date with no broken content, then add a valid date in the format MM/DD/YYYY:</span></span>
 
 ```yml
 ---
