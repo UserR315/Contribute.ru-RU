@@ -2,16 +2,16 @@
 title: Использование языка разметки Markdown для написания документации
 description: В этой статье приводятся базовые и справочные сведения о языке разметки Markdown, используемом для написания статей на сайте docs.microsoft.com.
 ms.date: 03/26/2019
-ms.openlocfilehash: 9fcd76e6103761465815784e4bf24e7042fb9f34
-ms.sourcegitcommit: 5f7212a091e9fc4e9cd1320fdfa8efaff51384c7
+ms.openlocfilehash: 7a42aa88bab65846ce54e2444387ac3a578779c0
+ms.sourcegitcommit: 7e73bef8bcdca39fd54cd79fbe8cb22da5566411
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373114"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71247335"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Использование языка разметки Markdown для написания документации
 
-Статьи на сайте [docs.microsoft.com](http://docs.microsoft.com) написаны на [Markdown](https://daringfireball.net/projects/markdown/) — упрощенном языке разметки, который легко использовать и изучать. Благодаря своей простоте он быстро становится отраслевым стандартом. Для документов сайта используется [тип Markdig](#markdown-flavor) разметки Markdown.
+Статьи на сайте [docs.microsoft.com](https://docs.microsoft.com) написаны на [Markdown](https://daringfireball.net/projects/markdown/) — упрощенном языке разметки, который легко использовать и изучать. Благодаря своей простоте он быстро становится отраслевым стандартом. Для документов сайта используется [тип Markdig](#markdown-flavor) разметки Markdown.
 
 
 ## <a name="markdown-basics"></a>Базовые сведения о Markdown

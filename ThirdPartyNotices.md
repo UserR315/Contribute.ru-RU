@@ -1,9 +1,18 @@
+---
+ms.openlocfilehash: 22a09e3b1c3fc3ef4b36eb2397e33df3a3e29ebe
+ms.sourcegitcommit: 7e73bef8bcdca39fd54cd79fbe8cb22da5566411
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71247377"
+---
 # <a name="legal-notices"></a>Юридическая информация
+
 Корпорация Майкрософт и все участники предоставляют вам лицензию для работы с документацией Майкрософт и другим содержимым в этом репозитории в рамках [международной открытой лицензии Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/legalcode) (см. файл [LICENSE](LICENSE)), а также лицензию для включения кода в репозиторий в рамках [лицензии MIT](https://opensource.org/licenses/MIT) (см. файл [LICENSE-CODE](LICENSE-CODE)).
 
 Microsoft, Windows, Microsoft Azure и (или) другие продукты и службы Microsoft, упомянутые в настоящем документе, могут быть товарными знаками или зарегистрированными товарными знаками корпорации Майкрософт в США и других странах.
 Лицензия для этого проекта не предоставляет права на использование любых имен, логотипов или товарных знаков корпорации Майкрософт.
-Общие указания по товарным знакам корпорации Майкрософт можно найти по адресу http://go.microsoft.com/fwlink/?LinkID=254653.
+Общие указания по товарным знакам корпорации Майкрософт можно найти по адресу https://go.microsoft.com/fwlink/?LinkID=254653.
 
 Дополнительные сведения о конфиденциальности см. по адресу https://privacy.microsoft.com/.
 
