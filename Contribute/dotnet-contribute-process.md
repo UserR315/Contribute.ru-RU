@@ -1,13 +1,16 @@
 ---
 title: Процедура участия в разработке репозиториев документации по .NET
 description: В этой статье описывается процедура участия в разработке репозиториев документации по .NET. Вы узнаете об используемых репозиториях, процессе организации содержимого и политиках управления примерами кода и другими ресурсами.
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: a5429864efe56e2004ccfeac4443dc74fbf15dc3
-ms.sourcegitcommit: 7e73bef8bcdca39fd54cd79fbe8cb22da5566411
+ms.openlocfilehash: e54ade313f026b5ea512c0f783d3f8ad83979390
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71247334"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288354"
 ---
 # <a name="process-for-contributing-to-net-docs"></a>Процесс участия в составлении документации по .NET
 
