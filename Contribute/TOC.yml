@@ -1,0 +1,56 @@
+- name: Руководство для участников. Общие сведения и задачи на основе браузера
+  href: index.md
+- name: Настройка и работа в локальной среде
+  items:
+    - name: 1. Регистрация в GitHub
+      href: get-started-setup-github.md
+    - name: 2. Установка средств Git и Markdown
+      href: get-started-setup-tools.md
+    - name: 3. Настройка локального репозитория Git
+      href: get-started-setup-local.md
+    - name: Основные сведения о Git и GitHub
+      href: git-github-fundamentals.md
+    - name: Полный рабочий процесс
+      href: how-to-write-workflows-major.md
+- name: Важнейшие инструменты для создания документов
+  items:
+    - name: Markdown
+      href: how-to-write-use-markdown.md
+    - name: Справочник по разметке Markdown
+      href: markdown-reference.md
+    - name: Краткое руководство по стилю
+      href: style-quick-start.md
+    - name: Создание ссылок
+      href: how-to-write-links.md
+    - name: Пакет создания документации
+      href: how-to-write-docs-auth-pack.md
+- name: Руководство по конкретной документации
+  items:
+    - name: Документация по .NET
+      items:
+        - name: Руководство по участию в разработке документации по .NET
+          href: dotnet-contribute.md
+        - name: Участие в разработке документации по .NET
+          href: dotnet-contribute-process.md
+        - name: Соглашения о стиле для документации по .NET
+          href: dotnet-style-guide.md
+        - name: Рекомендации по стилю
+          href: dotnet-voice-tone.md
+        - name: Обзор запросов на вытягивание
+          href: dotnet-pr-review.md
+    - name: Документация по PowerShell
+      items:
+        - name: Руководство по участию в разработке документации по PowerShell
+          href: powershell\powershell-contribute.md
+        - name: Процесс участия в составлении документации по PowerShell
+          href: powershell\powershell-contribute-process.md
+        - name: Краткое руководство по написанию статей о PowerShell
+          href: powershell\powershell-style-basic-markdown.md
+        - name: Руководство по стилю при написании примеров скриптов PowerShell
+          href: powershell\powershell-style-code.md
+        - name: Руководство по стилю при написании справки по командлетам PowerShell
+          href: powershell\powershell-style-reference.md
+        - name: Отправка запроса на вытягивание для PowerShell
+          href: powershell\powershell-pull-requests.md
+- name: Дополнительные ресурсы
+  href: additional-resources.md
