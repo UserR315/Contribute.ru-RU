@@ -1,13 +1,16 @@
 ---
 title: Использование языка разметки Markdown для написания документации
 description: В этой статье приводятся базовые и справочные сведения о языке разметки Markdown, используемом для написания статей на сайте docs.microsoft.com.
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 ms.date: 03/26/2019
-ms.openlocfilehash: 7a42aa88bab65846ce54e2444387ac3a578779c0
-ms.sourcegitcommit: 7e73bef8bcdca39fd54cd79fbe8cb22da5566411
+ms.openlocfilehash: c823e086ba61e7ddfe643da13afc8597e5ea280c
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71247335"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288422"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Использование языка разметки Markdown для написания документации
 
@@ -291,10 +294,10 @@ CREATE TABLE T1 (
 );
 ```
 
-## <a name="ops-custom-markdown-extensions"></a>Настраиваемые расширения OPS для Markdown
+## <a name="docs-custom-markdown-extensions"></a>Настраиваемые расширения Markdown для документации
 
 > [!NOTE]
-> Службы Open Publishing Services (OPS) используют Markdig, синтаксический анализатор Markdown, обеспечивающий высокую совместимость с диалектом GitHub Flavored Markdown (GFM). Markdig добавляет дополнительные функции за счет расширений Markdown. Поэтому для справки мы включили в этот материал некоторые разделы из руководства по разработке OPS. (Например, см. в содержании разделы "Markdig и расширения Markdown" и "Фрагменты кода".)
+> Сайт Docs.Microsoft.com (сайт документации) использует Markdig, синтаксический анализатор Markdown, обеспечивающий высокую совместимость с диалектом GitHub Flavored Markdown (GFM). Markdig добавляет дополнительные функции за счет расширений Markdown. Поэтому для справки мы включили в этот материал некоторые разделы из руководства по разработке OPS. (Например, см. в содержании разделы "Markdig и расширения Markdown" и "Фрагменты кода".)
 
 В статьях документации для общего форматирования, например для создания абзацев, ссылок, списков и заголовков, используется GFM. Для расширенного форматирования в статьях можно использовать следующие функции Markdig:
 
@@ -432,7 +435,7 @@ CREATE TABLE T1 (
 
 ## <a name="markdown-flavor"></a>Тип разметки Markdown
 
-Серверная часть сайта docs.microsoft.com использует службы Open Publishing Services (OPS), поддерживающие разметку, совместимую с [CommonMark](https://commonmark.org/), проанализированную через подсистему синтаксического анализа [Markdig](https://github.com/lunet-io/markdig). Такой тип разметки совместим с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
+Серверная часть сайта docs.microsoft.com поддерживает разметку, совместимую с [CommonMark](https://commonmark.org/), проанализированную через подсистему синтаксического анализа [Markdig](https://github.com/lunet-io/markdig). Такой тип разметки совместим с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
 
 ## <a name="see-also"></a>Дополнительные материалы
 

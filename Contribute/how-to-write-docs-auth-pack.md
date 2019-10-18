@@ -1,15 +1,18 @@
 ---
 title: Пакет создания документации для Visual Studio Code
 description: В этой статье описывается пакет расширений Visual Studio Code, который упрощает использование языка разметки Markdown для написания статей на сайте docs.microsoft.com.
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 author: meganbradley
 ms.author: mbradley
 ms.date: 10/22/2018
-ms.openlocfilehash: 00afafbbf16096ac6433c0ab276578d8d9084b51
-ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
+ms.openlocfilehash: 11f18ce4f769b478108d399b780937f927e0e12d
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49805661"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288329"
 ---
 # <a name="docs-authoring-pack-for-vs-code"></a>Пакет создания документации для VS Code
 
@@ -17,7 +20,7 @@ ms.locfileid: "49805661"
 
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint). Разработанный Дэвидом Энсоном (David Anson) популярный анализатор кода Markdown для проверки соблюдения стандартов оформления кода.
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). Полностью автономное средство проверки орфографии от компании Street Side Software.
-- [Docs Preview](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-preview). Использование каскадных таблиц стилей на сайте docs.microsoft.com для более точного предварительного просмотра языка разметки Markdown, в том числе его настраиваемой версии.
+- [Docs Preview](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-preview). Использование каскадных таблиц стилей на сайте docs.microsoft.com для более точного предварительного просмотра разметки Markdown, в том числе пользовательской.
 - [Docs Markdown](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-markdown). Рекомендации по использованию языка разметки Markdown для создания содержимого на сайте docs.microsoft.com в Open Publishing System (OPS), в том числе базовая поддержка Markdown и поддержка настраиваемого синтаксиса Markdown в OPS. Далее в этом разделе описывается расширение Docs Markdown.
 - [Docs Article Templates](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-article-templates). Расширение, с помощью которого пользователи могут применять основное содержимое Markdown в новых файлах.
 
