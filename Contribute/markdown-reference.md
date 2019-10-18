@@ -6,12 +6,13 @@ ms.author: mbradley
 ms.date: 05/18/2018
 ms.topic: contributor-guide
 ms.prod: non-product-specific
-ms.openlocfilehash: b4ac631a4ebdf7daf00bc39be80fe2e479720392
-ms.sourcegitcommit: 42e5a6ae071826afc2a32a9b7150ca113b39afdf
+ms.custom: external-contributor-guide
+ms.openlocfilehash: 3142b1aee8cadb69f82bfbcd3f89c701fac5b356
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57987889"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288312"
 ---
 # <a name="markdown-reference"></a>Справочник по разметке Markdown
 
@@ -416,7 +417,7 @@ Using XREF may require some configuration. For more information, see XREF Servic
 
 ... будет иметь следующий вид:
 
-> [!div class="op_multi_selector" title1="Platform" title2="Backend"]
+> [!div class="op_multi_selector" title1="Платформа" title2="Серверная часть"]
 > - [(iOS | .NET)](how-to-write-workflows-major.md)
 > - [(iOS | JavaScript)](how-to-write-workflows-major.md)
 > - [(Универсальные приложения Windows на C# | .NET)](how-to-write-workflows-major.md)
