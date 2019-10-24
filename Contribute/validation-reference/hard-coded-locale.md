@@ -4,18 +4,21 @@ description: Объяснение проблемы со сборкой доку�
 author: meganbradley
 ms.author: mbradley
 ms.topic: error-reference
-ms.date: 12/12/2018
+ms.date: 10/18/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: eb9ae17673b3da5f921139d88cc9af469423c9c3
-ms.sourcegitcommit: d357977935b432381f3df6297164417ed59ab434
+ms.openlocfilehash: 0fbc7634e00202fdfdf607b9504744a6d9846792
+ms.sourcegitcommit: 836d4d6127fabb5569ffc0809db5fb25e46038b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72310326"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72590874"
 ---
 # <a name="hard-coded-locale"></a>hard-coded-locale
 
-## <a name="warning"></a>Предупреждение
+> [!IMPORTANT]
+> Это правило изначально использовалось как "Предложение", чтобы дать командам по работе с содержимым время на оценку возможных последствий и разработку плана по очистке своих репозиториев. **Ему будет назначено состояние "Предупреждение" с 20 декабря 2019 г**.
+
+## <a name="suggestion"></a>Предложение
 
 `Link '{URL}' contains locale code '{code}'. For localizability, remove '{code}' from links to Microsoft sites.`
 
