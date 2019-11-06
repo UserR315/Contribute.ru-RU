@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 03/26/2019
-ms.openlocfilehash: c823e086ba61e7ddfe643da13afc8597e5ea280c
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: ffc44f07929890ef17b3878ba389dfeea82691a6
+ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288422"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592462"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Использование языка разметки Markdown для написания документации
 
@@ -23,7 +23,7 @@ ms.locfileid: "72288422"
 
 Чтобы создать заголовок, используйте знак (#), например:
 
-```markdown
+```md
 # This is heading 1
 ## This is heading 2
 ### This is heading 3
@@ -42,19 +42,19 @@ ms.locfileid: "72288422"
 
 Чтобы задать для текста **полужирное начертание**, заключите его в двойные звездочки:
 
-```markdown
+```md
 This text is **bold**.
 ```
 
 Чтобы задать для текста *курсивное начертание*, заключите его в одинарные звездочки:
 
-```markdown
+```md
 This text is *italic*.
 ```
 
 Чтобы задать для текста ***полужирное и курсивное*** начертание, заключите его в тройные звездочки:
 
-```markdown
+```md
 This is text is both ***bold and italic***.
 ```
 
@@ -62,7 +62,7 @@ This is text is both ***bold and italic***.
 
 Блоки цитирования создаются с помощью символа `>`:
 
-```markdown
+```md
 > The drought had lasted now for ten million years, and the reign of the terrible lizards had long since ended. Here on the Equator, in the continent which would one day be known as Africa, the battle for existence had reached a new climax of ferocity, and the victor was not yet in sight. In this barren and desiccated land, only the small or the swift or the fierce could flourish, or even hope to survive.
 ```
 
@@ -76,7 +76,7 @@ This is text is both ***bold and italic***.
 
 Неупорядоченный (маркированный) список можно отформатировать с помощью звездочек или тире. Например, следующая разметка Markdown:
 
-```markdown
+```md
 - List item 1
 - List item 2
 - List item 3
@@ -90,7 +90,7 @@ This is text is both ***bold and italic***.
 
 Чтобы вложить один список в другой, добавьте отступ для элементов дочернего списка. Например, следующая разметка Markdown:
 
-```markdown
+```md
 - List item 1
   - List item A
   - List item B
@@ -108,7 +108,7 @@ This is text is both ***bold and italic***.
 
 Упорядоченный (ступенчатый) список можно отформатировать с помощью соответствующих цифр. Например, следующая разметка Markdown:
 
-```markdown
+```md
 1. First instruction
 1. Second instruction
 1. Third instruction
@@ -122,7 +122,7 @@ This is text is both ***bold and italic***.
 
 Чтобы вложить один список в другой, добавьте отступ для элементов дочернего списка. Например, следующая разметка Markdown:
 
-```markdown
+```md
 1. First instruction
    1. Sub-instruction
    1. Sub-instruction
@@ -144,7 +144,7 @@ This is text is both ***bold and italic***.
 
 Например, следующая разметка Markdown:
 
-```markdown
+```md
 | Fun                  | With                 | Tables          |
 | :------------------- | -------------------: |:---------------:|
 | left-aligned column  | right-aligned column | centered column |
@@ -322,33 +322,26 @@ CREATE TABLE T1 (
 
 Примеры:
 
-```markdown
+```md
 > [!NOTE]
-> This is a NOTE
-
-> [!WARNING]
-> This is a WARNING
+> Information the user should notice even if skimming.
 
 > [!TIP]
-> This is a TIP
+> Optional information to help a user be more successful.
 
 > [!IMPORTANT]
-> This is IMPORTANT
+> Essential information required for user success.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+> [!WARNING]
+> Dangerous certain consequences of an action.
 ```
 
-Это выглядит следующим образом:
+На сайте docs.microsoft.com эти оповещения отображаются следующим образом:
 
-> [!NOTE]
-> This is a NOTE
-
-> [!WARNING]
-> This is a WARNING
-
-> [!TIP]
-> This is a TIP
-
-> [!IMPORTANT]
-> This is IMPORTANT
+![Вид оповещений из предыдущего примера с разными значками и цветами на опубликованной странице портала документации.](media/alerts-rendering.png)
 
 ### <a name="include-files"></a>Включаемые файлы
 
@@ -373,7 +366,7 @@ CREATE TABLE T1 (
 
 Пример.
 
-```markdown
+```md
 [!INCLUDE[sample include file](../includes/sampleinclude.md)]
 ```
 
@@ -385,7 +378,7 @@ CREATE TABLE T1 (
 
 Ниже приведен пример селектора:
 
-```markdown
+```md
 > [!div class="op_single_selector"]
 - [macOS](../docs/core/tutorials/using-on-macos.md)
 - [Windows](../docs/core/tutorials/with-visual-studio.md)
@@ -406,13 +399,13 @@ CREATE TABLE T1 (
 
 Замещающий текст, который содержит символы подчеркивания, отображается некорректно. Например, вместо
 
-```markdown
+```md
 ![ADextension_2FA_Configure_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
 ```
 
 используйте следующий вариант, позволяющий избежать символов подчеркивания:
 
-```markdown
+```md
 ![ADextension\_2FA\_Configure\_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
 ```
 
@@ -435,7 +428,7 @@ CREATE TABLE T1 (
 
 ## <a name="markdown-flavor"></a>Тип разметки Markdown
 
-Серверная часть сайта docs.microsoft.com поддерживает разметку, совместимую с [CommonMark](https://commonmark.org/), проанализированную через подсистему синтаксического анализа [Markdig](https://github.com/lunet-io/markdig). Такой тип разметки совместим с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
+Серверная часть сайта docs.microsoft.com поддерживает разметку Markdown в соответствии с [CommonMark](https://commonmark.org/) и ее синтаксический анализ через подсистему [Markdig](https://github.com/lunet-io/markdig). Такой тип разметки совместим с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
 
 ## <a name="see-also"></a>Дополнительные материалы
 
