@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 10/18/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: 0fbc7634e00202fdfdf607b9504744a6d9846792
-ms.sourcegitcommit: 836d4d6127fabb5569ffc0809db5fb25e46038b5
+ms.openlocfilehash: 1ab511398cbd622906ccb0a67e2b24968ee29374
+ms.sourcegitcommit: 55624c641bea5367bcfa08655c085bc950e8beae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72590874"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73166832"
 ---
 # <a name="hard-coded-locale"></a>hard-coded-locale
 
@@ -20,7 +20,7 @@ ms.locfileid: "72590874"
 
 ## <a name="suggestion"></a>Предложение
 
-`Link '{URL}' contains locale code '{code}'. For localizability, remove '{code}' from links to Microsoft sites.`
+`Link '{URL}' contains locale code '{code}'. For localizability, remove '{code}' from links to most Microsoft sites.`
 
 Ссылки на некоторые сайты Майкрософт не должны содержать коды языкового стандарта, такие как `en-us`. Если вы включите код языкового стандарта в ссылку на содержимое на английском языке, он также будет включен в локализованные ссылки, в результате чего эффективность локализации будет поставлена под сомнение. Например, если ссылка на локализованное содержимое на русском языке содержит код `en-us`, пользователи из России будут переходить по ней к статье на английском языке даже в том случае, если будет доступна русскоязычная версия публикации.
 
@@ -28,7 +28,7 @@ ms.locfileid: "72590874"
 
 - azure.microsoft.com
 - docs.microsoft.com
-- msdn.microsoft.com
+- msdn.microsoft.com (кроме social.msdn.com, которому требуется языковой стандарт для ссылки на корректный форум)
 - technet.microsoft.com
 
 ## <a name="resolution"></a>Способы устранения
