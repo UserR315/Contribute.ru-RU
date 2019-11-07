@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 6/5/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: 9f8074d3746ea375e29704853c82f48d95273cdc
-ms.sourcegitcommit: 55624c641bea5367bcfa08655c085bc950e8beae
+ms.openlocfilehash: f75f005ce9ab0cf332667d5c8b7778ba4ef35a0a
+ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73166749"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592541"
 ---
 # <a name="validation-timeout"></a>validation-timeout
 
@@ -34,8 +34,8 @@ ms.locfileid: "73166749"
 
    :::image type="content" source="media/find-repo.png" alt-text="Найдите свой репозиторий в поле поиска на портале Docs":::
 1. На вкладке **Build History** (Журнал сборок) щелкните **+ Manual Publish** (Опубликовать вручную).
-1. Выберите ветвь, которая получает предупреждение, например Master (главная ветвь).
-1. Для целевого объекта оставьте значение по умолчанию: **Docs site**(Сайт документации).
+1. Выберите ветвь, которая получает предупреждение, например master (главная ветвь).
+1. Для целевого объекта оставьте значение по умолчанию: **Docs Site** (Сайт документации).
 1. Установите флажок **Force Publish** (Опубликовать принудительно).
 1. Щелкните **Publish** (Опубликовать).
 
