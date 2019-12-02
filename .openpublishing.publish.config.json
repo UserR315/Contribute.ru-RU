@@ -4,7 +4,7 @@
       "docset_name": "ContributionGuide",
       "build_source_folder": "Contribute",
       "build_output_subfolder": "ContributionGuide",
-      "locale": "ru-RU",
+      "locale": "ru-ru",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": true,
@@ -32,10 +32,15 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.ru-RU",
+      "url": "https://github.com/Microsoft/templates.docs.msft.ru-ru",
       "branch": "master",
       "branch_mapping": {}
     },
+     {
+         "path_to_root": "_themes.pdf",
+         "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+         "branch": "master"
+     },
     {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/MicrosoftDocs/Contribute",
@@ -46,6 +51,20 @@
       }
     }
   ],
-  "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false
+"branch_target_mapping": {
+     "live-sxs": [
+           "Publish",
+           "Pdf" 
+    ],
+    "live": [
+           "Publish",
+           "Pdf"
+    ]
+},
+"Targets": {
+     "Pdf": {
+               "template_folder": "_themes.pdf"
+     }
+},
+  "need_generate_pdf_url_template": true
 }
