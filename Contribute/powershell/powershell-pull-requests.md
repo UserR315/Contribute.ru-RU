@@ -7,16 +7,16 @@ ms.custom: external-contributor-guide
 author: sdwheeler
 ms.author: sewhee
 ms.date: 10/09/2019
-ms.openlocfilehash: 09b9fd1057a32c8d2755e07cac564eca417bd357
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 156b5ec7b77bba5cf0a0ef2756ed8b64c21a8342
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72290088"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188223"
 ---
 # <a name="best-practices-for-pull-requests"></a>Рекомендации по запросам на вытягивание
 
-Чтобы опубликовать изменения содержимого, необходимо отправить запрос на вытягивание из своей вилки. Все запросы должны проходить проверку перед слиянием.
+Чтобы опубликовать изменения содержимого, необходимо отправить запрос на вытягивание из своей вилки. Все запросы на вытягивание должны проходить проверку перед слиянием.
 
 ## <a name="target-the-correct-branch"></a>Выбор правильной ветви
 

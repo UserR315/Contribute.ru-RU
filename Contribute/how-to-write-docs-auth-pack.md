@@ -7,12 +7,12 @@ ms.custom: external-contributor-guide
 author: meganbradley
 ms.author: mbradley
 ms.date: 10/22/2018
-ms.openlocfilehash: 11f18ce4f769b478108d399b780937f927e0e12d
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 1552ecc3e17e52439a7faa72973813099ce4d253
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288329"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188300"
 ---
 # <a name="docs-authoring-pack-for-vs-code"></a>Пакет создания документации для VS Code
 
@@ -32,7 +32,7 @@ ms.locfileid: "72288329"
 
 ## <a name="how-to-use-the-docs-markdown-extension"></a>Использование расширения Docs Markdown
 
-Чтобы открыть меню Docs Markdown, введите `ALT+M`. Щелкните нужную функцию или выберите ее с помощью стрелок "вверх" и "вниз" либо введите ее имя, чтобы отфильтровать в списке. Затем, когда функция будет выделена в меню, нажмите клавишу `ENTER`. Доступны следующие компоненты.
+Чтобы открыть меню Docs Markdown, нажмите `ALT+M`. Щелкните нужную функцию или выберите ее с помощью стрелок "вверх" и "вниз" либо введите ее имя, чтобы отфильтровать в списке. Затем, когда функция будет выделена в меню, нажмите клавишу `ENTER`. Доступны следующие компоненты.
 
 |Функция     |Описание           |
 |-------------|----------------------|

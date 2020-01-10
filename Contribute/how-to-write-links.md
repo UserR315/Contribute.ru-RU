@@ -7,15 +7,16 @@ ms.custom: external-contributor-guide
 author: gewarren
 ms.author: gewarren
 ms.date: 10/31/2018
-ms.openlocfilehash: 69371cd201d156b2d0ce5e3e38527d77baca5a8a
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 970f80b4e6ce795e0e2f15192d31680d7de6d35b
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288572"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188343"
 ---
-# <a name="using-links-in-documentation"></a>Использование ссылок в документации
-В этой статье описывается использование гиперссылок со страниц, размещенных на сайте docs.microsoft.com. Добавление ссылок в Markdown не представляет труда, но следует придерживаться ряда определенных правил. Ссылки могут указывать на содержимое на той же странице, на соседних страницах или вести на внешние сайты и URL-адреса.
+# <a name="use-links-in-documentation"></a>Использование ссылок в документации
+
+В этой статье описывается использование гиперссылок со страниц, размещенных на сайте docs.microsoft.com. Добавление ссылок в Markdown не представляет труда, но следует придерживаться ряда определенных правил. Ссылки могут указывать на содержимое на той же странице, на соседних страницах или на внешних сайтах и URL-адресах.
 
 Серверная часть сайта docs.microsoft.com использует службы Open Publishing Services (OPS), поддерживающие разметку, совместимую с [CommonMark](https://commonmark.org/), проанализированную через подсистему синтаксического анализа [Markdig](https://github.com/lunet-io/markdig). Такой тип разметки совместим с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
 
@@ -43,28 +44,35 @@ ms.locfileid: "72288572"
 
 ## <a name="links-from-one-article-to-another"></a>Ссылки для перехода от одной статьи к другой
 
-Чтобы добавить в статью, содержащую техническую документацию, встроенную ссылку на другую такую статью в том же docset, используйте следующий синтаксис.
+Чтобы добавить в статью, содержащую техническую документацию, встроенную ссылку на другую такую статью в том же *docset*, используйте следующий синтаксис.
 
-- Для статьи в каталоге, в которую добавляется ссылка на другую статью в том же каталоге:
+- Для статьи, в которую добавляется ссылка на другую статью в том же каталоге:
 
   `[link text](article-name.md)`
 
-- Для статьи в подкаталоге, в которую добавляется ссылка на статью в корневом каталоге:
+- Для статьи, в которую добавляется ссылка на статью в родительском каталоге текущего каталога:
 
   `[link text](../article-name.md)`
 
-- Для статьи в корневом каталоге, в которую добавляется ссылка на статью в подкаталоге:
+- Для статьи, в которую добавляется ссылка на статью в подкаталоге текущего каталога:
 
-  `[link text](./directory/article-name.md)`
+  `[link text](directory/article-name.md)`
 
-- Для статьи в подкаталоге, в которую добавляется ссылка на статью в другом подкаталоге:
+- Для статьи, в которую добавляется ссылка на статью в подкаталоге родительского каталога текущего каталога:
 
   `[link text](../directory/article-name.md)`
 
-- Для статьи, ссылка на которую добавляется в разные docset (даже в рамках одного репозитория):  `[link text](./directory/article-name)`
+> [!NOTE]
+> Ни в одном из предыдущих примеров `~/` не используется в качестве части ссылки. Если вы ссылаетесь на абсолютный путь в корне репозитория, начните с `/`. Добавление `~/` приведет к формированию недопустимых ссылок при навигации по репозиториям исходного кода на GitHub. Если начать путь с `/`, разрешение происходит успешно.
 
-> [!IMPORTANT]
-> Ни в одном из примеров выше `~/` не используется в качестве части ссылки. Если вы ссылаетесь на путь в корне репозитория, начните с `/`. Добавление `~/` приведет к формированию недопустимых ссылок при навигации по репозиториям исходного кода на GitHub. Если начать путь с `/`, разрешение происходит успешно.
+Чтобы создать ссылку на статью в другом docset, даже если файл находится в том же репозитории, используйте следующий синтаксис:
+
+`[link text](/docset-root/directory/article-name)`
+   
+Например, если в статью с корневым URL-адресом `https://docs.microsoft.com/dotnet` добавляется ссылка на статью с корневым URL-адресом `https://docs.microsoft.com/visualstudio`, эта ссылка будет иметь следующий вид: `[link text](/visualstudio/directory/article-name)`.
+
+> [!TIP]
+> Для статей в одном *docset* указывается один и тот же фрагмент URL-адреса после "docs.microsoft.com". Например, `https://docs.microsoft.com/dotnet/core/get-started` и `https://docs.microsoft.com/dotnet/framework/install` находятся в одном docset, а `https://docs.microsoft.com/dotnet/core/get-started` и `https://docs.microsoft.com/visualstudio/whats-new` — в разных.
 
 ## <a name="links-to-anchors"></a>Ссылки на привязки
 
@@ -75,12 +83,7 @@ ms.locfileid: "72288572"
   `[link](#the-text-of-the-H2-section-separated-by-hyphens)`
   `[Create cache](#create-cache)`
 
-- Для ссылки на привязку в другой статье в том же подкаталоге:
-
-  `[link text](article-name.md#anchor-name)`
-  `[Configure your profile](media-services-create-account.md#configure-your-profile)`
-
-- Для ссылки на привязку в другом подкаталоге службы:
+- Для ссылки на привязку в другой статье:
 
   `[link text](../directory/article-name.md#anchor-name)`
   `[Configure your profile](../directory/media-services-create-account.md#configure-your-profile)`
@@ -147,10 +150,6 @@ ms.locfileid: "72288572"
 - **Дальнейшие действия**. Неплохим решением будет добавить ссылку, скажем, на блог MVP в разделе "Дальнейшие действия". Опять же, при этом пользователь должен понимать, что он покидает текущий сайт.
 - **Юридическая информация**. Юридическая информация предоставляется в разделе **Ссылки на веб-сайты третьих лиц** на странице **условий использования**. Ссылка на нее размещена в нижнем колонтитуле каждой страницы ms.com.
 
-## <a name="links-to-msdn-or-technet"></a>Ссылки на MSDN или TechNet
-
-Если нужно добавить ссылку на MSDN или TechNet, используйте полную ссылку на статью, удалив указатель языка "en-us".
-
 ## <a name="links-to-azure-powershell-reference-content"></a>Ссылки на справочные материалы по Azure PowerShell
 
 Справочные материалы по Azure PowerShell с ноября 2016 г. претерпели некоторые изменения. Выполните приведенные ниже инструкции, чтобы добавить ссылку на эти материалы в другие статьи на сайте docs.microsoft.com.
@@ -174,18 +173,15 @@ ms.locfileid: "72288572"
 
 Если включить эти URL-адреса, пользователь будет перенаправлен к последней версии содержимого. В таком случае указывать моникер версии не требуется. Кроме того, вам не придется обновлять ссылки на тематические материалы при изменении версии.
 
-Чтобы создать правильную ссылку на страницу, откройте ее в браузере и скопируйте URL-адрес.
-Удалите `https://docs.microsoft.com` и сведения о языковом стандарте.
-
-Если ссылка размещена в оглавлении, используйте полный URL-адрес без указателя языка.
+Чтобы создать правильную ссылку на страницу, откройте ее в браузере и скопируйте URL-адрес, а затем удалите сведения о языковом стандарте, например **en-us**.
 
 Пример разметки Markdown:
 
 ```markdown
-[Get-AzureRmResourceGroup](/powershell/module/azurerm.resources/get-azurermresourcegroup)
-[Get-AzureRmResourceGroup](/powershell/module/azurerm.resources/get-azurermresourcegroup?view=azurermps-4.1.0)
-[New-AzureVM](/powershell/module/azure/new-azurevm?view=azuresmps-4.0.0)
-[New-AzureRmVM](/powershell/module/azurerm.compute/new-azurermvm)
-[Install Azure PowerShell for Service Management](/powershell/azure/servicemanagement/install-azurerm-ps)
-[Install Azure PowerShell](/powershell/azure/install-azurerm-ps)
+[Get-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/get-azurermresourcegroup)
+[Get-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/get-azurermresourcegroup?view=azurermps-4.1.0)
+[New-AzureVM](https://docs.microsoft.com/powershell/module/azure/new-azurevm?view=azuresmps-4.0.0)
+[New-AzureRmVM](https://docs.microsoft.com/powershell/module/azurerm.compute/new-azurermvm)
+[Install Azure PowerShell for Service Management](https://docs.microsoft.com/powershell/azure/servicemanagement/install-azurerm-ps)
+[Install Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps)
 ```
