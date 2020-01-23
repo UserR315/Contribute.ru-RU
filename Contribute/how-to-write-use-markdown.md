@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 03/26/2019
-ms.openlocfilehash: 1f43cecb450c988e4f546aa5ecc5907061521f34
-ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
+ms.openlocfilehash: 086972acaef9647709fbe43f07c07abde71c7d9f
+ms.sourcegitcommit: fd92198ec2d0ce2d6687b6f1521a82b3fefc60e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75188283"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76111073"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Использование языка разметки Markdown для написания документации
 
@@ -389,10 +389,312 @@ CREATE TABLE T1 (
 
 ### <a name="code-include-references"></a>Включение фрагментов кода
 
-В Markdig есть расширение с расширенными функциями для включения в статью фрагментов кода. Этот формат обеспечивает расширенный рендеринг на основе функций GFM, таких как выбор языка программирования и раскраска синтаксиса, а также другие полезные функции, например:
+Расширение Markdown для фрагментов кода в документации позволяет вам вставлять в свои статьи фрагменты кода и форматировать их синтаксис в соответствии с используемым языком программирования. Вы можете включать код из текущего либо из какого-то другого репозитория. Ниже приведены инструкции по использованию этой функции с пакетом создания документации [docs.microsoft.com Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack). Доступен **Предварительный просмотр** фрагментов кода в Visual Studio Code. Предварительный просмотр не поддерживает выделение и интерактивные возможности.
 
-- включение централизованных примеров или фрагментов кода из внешнего репозитория;
-- пользовательский интерфейс с вкладками для отображения нескольких версий примеров кода на разных языках.
+> [!NOTE]
+> Расширение не поддерживает включение в содержимое кода во встроенном (inline) режиме. Используйте для этого стандартный элемент ``` в Markdown.
+
+#### <a name="code-from-current-repository"></a>Код из текущего репозитория
+
+1. Находясь в Visual Studio Code, нажмите клавиши **ALT+M** или **OPTION+M** и выберите "Фрагмент кода".
+2. Вам будет предложено выполнить поиск по всему содержимому, в какой-то области или по различным репозиториям. Выберите поиск по всему локальному содержимому.
+3. Введите условие поиска и найдите нужный файл. Найдя файл, выберите его.
+4. Затем выберите, какие строки кода нужно включить в фрагмент, используя следующие параметры: **ИД**, **Диапазон** или **Никакие**.
+5. В зависимости от выбора на шаге 4 предоставьте необходимые значения.
+
+Отображение всего файла кода:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs":::
+```
+
+Отображение части файла кода путем указания номера строк:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26":::
+```
+
+Отображение части файла кода путем указания имени фрагмента:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" id="snippet_Create":::
+```
+
+#### <a name="code-from-another-repository"></a>Код из другого репозитория
+
+1. Находясь в Visual Studio Code, нажмите клавиши **ALT+M** или **OPTION+M** и выберите "Фрагмент кода".
+2. Вам будет предложено выполнить поиск по всему содержимому, в какой-то области или по различным репозиториям. Выберите поиск по репозиториям.
+3. Вам будет представлен набор репозиториев из *.openpublishing.publish.config.json*. Выберите репозиторий.
+3. Введите условие поиска и найдите нужный файл. Найдя файл, выберите его.
+4. Затем выберите, какие строки кода нужно включить в фрагмент, используя следующие параметры: **ИД**, **Диапазон** или **Никакие**.
+5. В зависимости от выбора на шаге 5 предоставьте необходимые значения.
+
+Ссылка на фрагмент кода будет выглядеть следующим образом:
+
+```markdown
+:::code language="csharp" source="~/samples-durable-functions/samples/csx/shared/Location.csx" highlight="2,5":::
+```
+
+#### <a name="path-to-code-file"></a>Путь к файлу кода
+
+Пример.
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26":::
+```
+
+Пример взят из репозитория документов ASP.NET, файла статьи [aspnetcore/data/ef-mvc/crud.md](https://github.com/aspnet/Docs/blob/master/aspnetcore/data/ef-mvc/crud.md). Для ссылки на файл кода используется относительный путь к [aspnetcore/data/ef-mvc/intro/samples/cu/Controllers/StudentsController.cs](https://github.com/aspnet/Docs/blob/master/aspnetcore/data/ef-mvc/intro/samples/cu/Controllers/StudentsController.cs) в том же репозитории.
+
+#### <a name="selected-line-numbers"></a>Выбранные номера строк
+
+Пример.
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26":::
+```
+
+В этом примере отображаются только строки 2–24 и 26 из файла кода *StudentController.cs*.
+
+Предпочтительнее использовать фрагменты кода по номерам жестко закодированных строк, как описано в следующем разделе.
+
+#### <a name="named-snippet"></a>Именованный фрагмент кода
+
+Пример.
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" id="snippet_Create":::
+```
+
+Используйте для имени только буквы и символы подчеркивания.
+
+В примере отображается раздел `snippet_Create` файла кода. В файле кода для этого примера имеется часть на C# с именем `snippet_Create`:
+
+```cs
+// code excluded from the snippet
+// <snippet_Create>
+// code included in the snippet
+// </snippet_Create>
+// code excluded from the snippet
+```
+
+По возможности ссылайтесь на именованный раздел, а не указывайте номера строк. Ссылки на номера строк являются ненадежными, так как файлы кода неизбежно изменяются с помощью способов, которые изменяют номера строк.
+Вы не обязательно получите уведомления об этих изменениях. В статье в конечном итоге будут отображаться неправильные строки, и вы даже не будете об этом знать.
+
+#### <a name="highlighting-selected-lines"></a>Выделение выбранных строк
+
+Пример.
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26" highlight="2,5":::
+```
+
+В примере выделены строки 2 и 5, если считать от начала отображаемого фрагмента кода. (Подсчет выделяемых номеров строк не начинается от начала файла кода.) Другими словами, выделяются строки 3 и 6 файла кода.
+
+#### <a name="interactive-code-snippets"></a>Интерактивные фрагменты кода
+
+Для фрагментов кода, включаемых по ссылке, можно включить интерактивный режим. Ниже приведены примеры:
+
+```markdown
+:::code language="powershell" source="PowerShell.ps1" interactive="cloudshell-powershell":::
+```
+
+```markdown
+:::code language="bash" source="Bash.sh" interactive="cloudshell-bash":::
+```
+
+Чтобы включить эту функцию для конкретного блока кода, используйте атрибут `interactive`. Допустимые значения атрибута:
+
+- `cloudshell-powershell` — активирует Cloud Shell в Azure PowerShell, как в предыдущем примере.
+- `cloudshell-bash` — включает Azure Cloud Shell
+- `try-dotnet` — активирует Try .NET.
+- `try-dotnet-class` — активирует Try .NET с формированием шаблонов классов.
+- `try-dotnet-method` — активирует Try .NET с формированием шаблонов методов.
+
+Существуют совместимые пары `language` и `interactive`. Например, если для `interactive` задано `try-dotnet`, должен использоваться язык `csharp`. Аналогичным образом `cloudshell-powershell` будет работать только с `powershell`, а `cloudshell-bash` — только с языком `bash`.
+
+В Azure Cloud Shell и PowerShell Cloud Shell пользователи могут выполнять команды только с собственной учетной записью Azure.
+
+[Try .NET](https://github.com/dotnet/try) позволяет использовать интерактивное выполнение кода .NET (C#) в браузере. Для Try .NET доступны три варианта интерактивности: `try-dotnet`, `try-dotnet-class` и `try-dotnet-method`. Для этих возможностей не требуется какая-либо дополнительная конфигурация в фрагменте кода. Доступные сейчас по умолчанию пространства имен:
+
+- System
+- System.Linq
+- System.Collections.Generic
+- System.Text
+- System.Globalization
+- System.Text.RegularExpressions
+
+Значение атрибута `try-dotnet` позволяет пользователям выполнять код C# в браузере напрямую, не заключая его в код-оболочку.
+
+Пример.
+
+```md
+:::code language="csharp" source="relative/path/source.cs" interactive="try-dotnet":::
+```
+
+Значение `try-dotnet-class` активирует формирование шаблонов на уровне классов для кода, передаваемого интерактивному компоненту.
+
+```md
+:::code language="csharp" source="relative/path/source.cs" id="snippet-tag" interactive="try-dotnet-class":::
+```
+
+Пример.
+
+Фрагмент кода без формирования шаблонов классов
+
+```md
+public static void Main()
+    {  
+        // Specify the data source.  
+        int[] scores = new int[] { 97, 92, 81, 60 };        // Define the query expression.
+
+        IEnumerable<int> scoreQuery =
+            from score in scores  
+            where score > 80  
+            select score;
+
+        // Execute the query.  
+        foreach (int i in scoreQuery)
+        {  
+            Console.Write(i + " ");
+        }
+    }  
+}
+```
+
+Фрагмент кода с формированием шаблонов классов
+
+```md
+class NameOfClass {
+
+   public static void Main()
+    {
+        // Specify the data source.
+        int[] scores = new int[] { 97, 92, 81, 60 };
+
+        // Define the query expression.
+        IEnumerable<int> scoreQuery =
+            from score in scores
+            where score > 80
+            select score;
+
+        // Execute the query.
+        foreach (int i in scoreQuery)
+        {
+            Console.Write(i + " ");
+        }
+    }  
+}
+```
+
+Значение `try-dotnet-method` активирует формирование шаблонов на уровне методов для кода, передаваемого интерактивному компоненту.
+
+```md
+:::code language="csharp" source="relative/path/source.cs" id="snippet-tag" interactive="try-dotnet-method":::
+```
+
+Пример.
+
+Фрагмент кода без формирования шаблонов методов
+
+```md
+/*Print some string in C#*/
+
+Console.WriteLine("Hello C#.);
+```
+
+Фрагмент кода с формированием шаблонов методов
+
+```md
+public static void Main(string args[]) {
+
+/*Print some string in C#*/
+
+Console.WriteLine("Hello C#.);
+}
+```
+
+#### <a name="snippet-syntax-reference"></a>Синтаксис ссылок на фрагменты
+
+Вы можете ссылаться на фрагменты кода, хранящиеся в репозитории, с помощью указанного языка кода. Содержимое заданного пути к коду будет развернуто и включено в файл.
+
+Какие-либо ограничения на структуру папок для фрагментов кода отсутствуют. Управление фрагментами кода осуществляется аналогично управлению обычным исходным кодом.
+
+Синтаксис
+
+```md
+:::code language="<language>" source="<path>" <attribute>="<attribute-value>":::
+```
+
+> [!IMPORTANT]
+> Этот синтаксис является блоком расширения Markdown. Он должен использоваться в отдельной строке.
+
+- `<language>` (*необязательно*)
+  - Язык фрагмента кода. Дополнительные сведения см. в разделе [Поддерживаемые языки](#supported-languages) далее в этой статье.
+
+- `<path>` (*обязательно*)
+  - Относительный путь в файловой системе, который указывает файл фрагмента кода для ссылки.
+
+- `<attribute>` и `<attribute-value>` (*необязательно*)
+  - Используются вместе для указания способа получения кода из файла:
+    - `range`: `1,3-5` Диапазон строк. Этот пример содержит строки 1, 3, 4 и 5.
+    - `id`: `snippet_Create` Идентификатор фрагмента, который нужно вставить из файла кода. Это значение не может существовать одновременно с диапазоном.
+    - `highlight`: `2-4,6` Диапазон и (или) номера строк, которые должны выделяться в создаваемом фрагменте кода. Нумерация ведется в масштабе самого фрагмента, а не импортируемого диапазона.
+    - `interactive`: `cloudshell-powershell`, `cloudshell-bash`, `try-dotnet`, `try-dotnet-class`, `try-dotnet-method` Строковое значение, определяющее тип используемой интерактивности.
+
+#### <a name="supported-languages"></a>Поддерживаемые языки
+
+|Имя|Название Markdown|
+|-----|-------|
+|.NET Core CLI|`dotnetcli`|
+|ASP.NET с C#|`aspx-csharp`|
+|ASP.NET с Visual Basic|`aspx-vb`|
+|Azure CLI|`azurecli`|
+|Azure CLI в браузере|`azurecli-interactive`|
+|Azure PowerShell в браузере|`azurepowershell-interactive`|
+|AzCopy|`azcopy`|
+|Bash|`bash`|
+|C++|`cpp`|
+|C#|`csharp`|
+|C# в браузере|`csharp-interactive`|
+|Консоль|`console`|
+|CSHTML|`cshtml`|
+|DAX|`dax`|
+|Docker|`Dockerfile`|
+|F#|`fsharp`|
+|HTML|`html`|
+|Java|`java`|
+|JavaScript|`javascript`|
+|JSON|`json`|
+|Язык запросов Kusto|`kusto`|
+|Markdown|`md`|
+|Objective-C|`objc`|
+|PHP|`php`|
+|PowerShell|`powershell`|
+|Power Query M|`powerquery-m`|
+|protobuf|`protobuf`|
+|Python|`python`|
+|Ruby|`ruby`|
+|SQL|`sql`|
+|Swift|`swift`|
+|VB|`vb`|
+|XAML|`xaml`|
+|XML|`xml`|
+|YAML|`yml`|
+
+#### <a name="code-extensions"></a>Расширения кода
+
+|Имя|Название Markdown|Расширение файла|
+|-----|-------|-----|
+|C#|csharp|.cs, .csx|
+|C++|cpp|.cpp, .h|
+|F#|fsharp|.fs|
+|Java|java|.java|
+|JavaScript|javascript|.js|
+|Python|python|.py|
+|SQL|sql|.sql|
+|VB|vb|.vb|
+|XAML|xaml|.xaml|
+|XML|xml|.xml|
 
 ## <a name="gotchas-and-troubleshooting"></a>Сбои и устранение неполадок
 
