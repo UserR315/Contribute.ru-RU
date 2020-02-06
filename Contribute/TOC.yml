@@ -20,6 +20,8 @@
       href: markdown-reference.md
     - name: Краткое руководство по стилю
       href: style-quick-start.md
+    - name: Руководство по стилю
+      href: /style-guide/
     - name: Создание ссылок
       href: how-to-write-links.md
     - name: Пакет создания документации
