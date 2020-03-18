@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 08/30/2017
-ms.openlocfilehash: 997f313e94e4858f37501736c1ec0be2fa8fd552
-ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
+ms.openlocfilehash: 5231b68f04caa94d3ff2ff26afc38e3218ca06b8
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75188244"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331913"
 ---
 # <a name="github-contribution-workflow-for-major-or-long-running-changes"></a>Рабочий процесс по внесению значительных или времязатратных изменений на сайте GitHub
 
@@ -110,4 +110,4 @@ git checkout -b "branchname"
 
 Вот и все! Вы внесли свой вклад в содержимое сайта docs.microsoft.com.
 
-- Чтобы узнать больше о разметке Markdown и синтаксисе расширений Markdown, см. статью [Важнейшие инструменты для создания документов](how-to-write-use-markdown.md).
+- Чтобы узнать больше о разметке Markdown и синтаксисе расширений Markdown, см. статью [Справочник по Markdown](markdown-reference.md).

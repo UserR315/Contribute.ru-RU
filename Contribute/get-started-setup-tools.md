@@ -7,12 +7,12 @@ ms.custom: external-contributor-guide
 author: jasonwhowell
 ms.author: jasonh
 ms.date: 04/30/2018
-ms.openlocfilehash: 24d47c4e094c318be75a27dbaaec11d8ead94452
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: ba7e511d756f43acfa5cfbbd228f793d7fbce727
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288556"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331867"
 ---
 # <a name="install-content-authoring-tools"></a>Установка средств для создания содержимого
 
@@ -49,7 +49,7 @@ Markdown — это упрощенный язык разметки, которы
 
 Тексты с разметкой Markdown сохраняются в файлы с расширением MD.
 
-Дополнительные сведения о написании кода на языке Markdown, включая основные сведения о Markdown и функциях, которые поддерживаются настраиваемыми расширениями OPS для Markdown, см. в статьях [Использование Markdown для написании документации ](how-to-write-use-markdown.md) и [Справочник по разметке Markdown для OPS](markdown-reference.md).
+Дополнительные сведения о написании кода на языке Markdown, включая основные сведения о Markdown и функциях, которые поддерживаются настраиваемыми расширениями OPS для Markdown, см. в статье [Справочник по Markdown](markdown-reference.md).
 
 ## <a name="visual-studio-code"></a>Visual Studio Code
 

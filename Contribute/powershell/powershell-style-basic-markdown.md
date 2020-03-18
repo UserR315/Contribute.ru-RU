@@ -7,12 +7,12 @@ ms.custom: external-contributor-guide
 author: sdwheeler
 ms.author: sewhee
 ms.date: 10/09/2019
-ms.openlocfilehash: e7ee9295794adfde78a2d500f0de3309dd3c821a
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 073a44240b1aa4baa9e655dab069097d21cdd66d
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72290364"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331936"
 ---
 # <a name="markdown-style-guide-for-powershell-docs"></a>Руководство по стилю Markdown для документации по PowerShell
 
@@ -59,7 +59,7 @@ title: [ARTICLE TITLE]
 
 ## <a name="basic-markdown-gfm-and-special-characters"></a>Базовый Markdown, GFM и специальные символы
 
-О базовых принципах Markdown, GitHub Flavored Markdown (GFM) и конкретных расширениях OPS можно прочитать в статьях о [Markdown](../how-to-write-use-markdown.md) и в [справочнике Markdown](../markdown-reference.md).
+О базовых принципах Markdown, GitHub Flavored Markdown (GFM) и конкретных расширениях OPS можно прочитать в статье [Справочник по Markdown](../markdown-reference.md).
 
 Markdown использует для форматирования специальные символы, например \*, \` и \#. Если вы хотите включить такой символ в свою статью, сделайте одно из двух:
 

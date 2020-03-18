@@ -14,18 +14,40 @@
       href: how-to-write-workflows-major.md
 - name: Важнейшие инструменты для создания документов
   items:
-    - name: Markdown
-      href: how-to-write-use-markdown.md
     - name: Справочник по разметке Markdown
       href: markdown-reference.md
+      displayName: alerts notes tips important caution warnings apostrophes quotation marks quotes blockquotes bold italic code snippets columns headings html images includes links lists bullets bulleted checklist numbered next steps button localize non-localized section selector superscript subscript table tables tabs tabbed videos icons
     - name: Краткое руководство по стилю
       href: style-quick-start.md
     - name: Руководство по стилю
       href: /style-guide/
+    - name: Добавление кода в статьи
+      href: code-in-docs.md
+      displayName: 'backtick, code blocks, inline code blocks, repo snippet reference, !code-, interactive code snippets, programming languages, languages, code extensions, extensions'
+    - name: Форматирование текста
+      href: text-formatting-guidelines.md
     - name: Создание ссылок
       href: how-to-write-links.md
-    - name: Пакет создания документации
-      href: how-to-write-docs-auth-pack.md
+    - name: Docs Authoring Pack
+      items:
+        - name: Общие сведения
+          href: how-to-write-docs-auth-pack.md
+        - name: Компоненты
+          items:
+            - name: Выполнение языка разработки
+              href: docs-authoring/dev-lang-completion.md
+            - name: Сжатие изображений
+              href: docs-authoring/image-compression.md
+            - name: Обновления метаданных
+              href: docs-authoring/metadata-updates.md
+            - name: Переформатирование таблиц Markdown
+              href: docs-authoring/reformat-table.md
+            - name: Замена парных кавычек
+              href: docs-authoring/smart-quote-replacement.md
+            - name: Сортировка перенаправлений
+              href: docs-authoring/sort-redirects.md
+            - name: Сортировка выделенных фрагментов
+              href: docs-authoring/sort-selection.md
 - name: Руководство по конкретной документации
   items:
     - name: Документация по .NET
