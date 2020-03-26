@@ -7,12 +7,12 @@ ms.date: 01/30/2020
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 14cc9f0912149eb342c97d0dd7d2776bd54c84e7
-ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
+ms.openlocfilehash: c1568264c687ebaf26048f5432fdea7d5132c012
+ms.sourcegitcommit: 216ef77ca2cd1eeb31c6c89d96778b178fc0d540
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78331977"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070074"
 ---
 # <a name="docs-markdown-reference"></a>Справочник по Docs Markdown
 
@@ -627,6 +627,19 @@ Goodbye <sup>This is superscript!</sup>
 ### <a name="line-breaks-within-words-in-second-column-table-cells"></a>Разрывы строк внутри слов в ячейках второго столбца
 
 Разрывы строк могут вставляться автоматически внутри слов только во втором столбце таблицы. Чтобы разрешить разрывы только во втором столбце, примените класс `mx-tdCol2BreakAll` с помощью синтаксиса переноса `div`, как показано выше.
+
+### <a name="data-matrix-tables"></a>Таблицы матриц данных
+
+Таблица матрицы данных содержит заголовок и взвешенный первый столбец. Она позволяет создать матрицу с пустой ячейкой в верхнем углу слева. Пользовательскую разметку Markdown для таблиц матриц данных можно найти на сайте документации:
+
+```md
+|                  |Header 1 |Header 2|
+|------------------|---------|--------|
+|**First column A**|Cell 1A  |Cell 2A |
+|**First column B**|Cell 1B  |Cell 2B |
+```
+
+Для каждой запись в первом столбце нужно задать полужирное начертание (`**bold**`). Иначе таблицы будут недоступны для средств чтения с экрана или недопустимы для сайта документации.
 
 ### <a name="html-tables"></a>Таблицы HTML
 
