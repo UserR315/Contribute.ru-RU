@@ -6,19 +6,19 @@ ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 author: gewarren
 ms.author: gewarren
-ms.date: 10/31/2018
-ms.openlocfilehash: 970f80b4e6ce795e0e2f15192d31680d7de6d35b
-ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
+ms.date: 03/31/2020
+ms.openlocfilehash: ca29d4b9e81f8af3b680367b210bd1734860687d
+ms.sourcegitcommit: 5ef2dc72e2ff8bddf873415a3f4b816eb16029dd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75188343"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624743"
 ---
 # <a name="use-links-in-documentation"></a>Использование ссылок в документации
 
 В этой статье описывается использование гиперссылок со страниц, размещенных на сайте docs.microsoft.com. Добавление ссылок в Markdown не представляет труда, но следует придерживаться ряда определенных правил. Ссылки могут указывать на содержимое на той же странице, на соседних страницах или на внешних сайтах и URL-адресах.
 
-Серверная часть сайта docs.microsoft.com использует службы Open Publishing Services (OPS), поддерживающие разметку, совместимую с [CommonMark](https://commonmark.org/), проанализированную через подсистему синтаксического анализа [Markdig](https://github.com/lunet-io/markdig). Такой тип разметки совместим с [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
+Серверная часть сайта docs.microsoft.com использует службы Open Publishing Services (OPS), поддерживающие разметку, совместимую с [CommonMark][], проанализированную через подсистему синтаксического анализа [Markdig][]. Такой тип разметки совместим с [GitHub Flavored Markdown (GFM)][GFM], так как большинство документов хранятся на GitHub, где их можно править. Дополнительные функции добавляются с помощью расширений Markdown.
 
 > [!IMPORTANT]
 > Все ссылки должны быть безопасными (с протоколом `https` вместо `http`), если целевой объект поддерживает такой протокол (большинство целевых объектов поддерживают).
@@ -34,7 +34,7 @@ ms.locfileid: "75188343"
 
 - `For more information, see the [contributor guide index](https://github.com/Azure/azure-content/blob/master/contributor-guide/contributor-guide-index.md).`
 
-- `For more details, see the [SET TRANSACTION ISOLATION LEVEL](https://msdn.microsoft.com/library/ms173763.aspx) reference.`
+- `For more details, see the [SET TRANSACTION ISOLATION LEVEL](https://docs.microsoft.com/sql/t-sql/statements/set-transaction-isolation-level-transact-sql) reference.`
 
 **Неправильно:**
 
@@ -44,8 +44,17 @@ ms.locfileid: "75188343"
 
 ## <a name="links-from-one-article-to-another"></a>Ссылки для перехода от одной статьи к другой
 
-Чтобы добавить в статью, содержащую техническую документацию, встроенную ссылку на другую такую статью в том же *docset*, используйте следующий синтаксис.
+Система публикации поддерживает два типа гиперссылок: **URL-адреса** и **ссылки на файлы**.
 
+URL-ссылкой может быть URL-путь относительно корня сайта docs.microsoft.com или абсолютный URL-адрес, имеющий синтаксис полного URL-адреса (например, `https://github.com/MicrosoftDocs/PowerShell-Docs`).
+
+- Используйте URL-адреса для ссылки на содержимое за пределами текущего _набора документации_ или для ссылок между автоматически создаваемой справкой и концептуальными статьями в наборе документации.
+- Самый простой способ создать относительную ссылку — скопировать URL-адрес в браузере, а затем удалить часть `https://docs.microsoft.com/en-us` из значения, вставленного в разметку Markdown.
+   - Не включайте языковой стандарт (например, "/ru-ru") в URL-адреса ресурсов Майкрософт.
+
+Ссылка на файл служит для перехода от одной статьи к другой в наборе документации.
+
+- В путях к файлам используются прямые (`/`), а не обратные косые черты.
 - Для статьи, в которую добавляется ссылка на другую статью в том же каталоге:
 
   `[link text](article-name.md)`
@@ -65,40 +74,215 @@ ms.locfileid: "75188343"
 > [!NOTE]
 > Ни в одном из предыдущих примеров `~/` не используется в качестве части ссылки. Если вы ссылаетесь на абсолютный путь в корне репозитория, начните с `/`. Добавление `~/` приведет к формированию недопустимых ссылок при навигации по репозиториям исходного кода на GitHub. Если начать путь с `/`, разрешение происходит успешно.
 
-Чтобы создать ссылку на статью в другом docset, даже если файл находится в том же репозитории, используйте следующий синтаксис:
+### <a name="structure-of-links-on-docsmicrosoftcom"></a>Структура ссылок на docs.microsoft.com
 
-`[link text](/docset-root/directory/article-name)`
-   
-Например, если в статью с корневым URL-адресом `https://docs.microsoft.com/dotnet` добавляется ссылка на статью с корневым URL-адресом `https://docs.microsoft.com/visualstudio`, эта ссылка будет иметь следующий вид: `[link text](/visualstudio/directory/article-name)`.
+Содержимое, публикуемое на сайте docs.microsoft.com, имеет следующую структуру URL-адресов:
+
+```
+https://docs.microsoft.com/<locale>/<product-service>/[<feature-service>]/[<subfolder>]/<topic>[?view=<view-name>]
+```
+
+Примеры:
+
+```
+https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview
+https://docs.microsoft.com/en-us/powershell/azure/overview?view=azurermps-5.1.1
+```
+
+- `<locale>` — определяет язык статьи (например, en-us или ru-ru).
+- `<product-service>` — название продукта или службы (например, powershell, dotnet или azure).
+- `[<feature-service>]` — (необязательно) имя компонента или подслужбы продукта (например, csharp или load-balancer).
+- `[<subfolder>]` — (необязательно) имя подпапки компонента.
+- `<topic>` — имя файла статьи (например, load-balancer-overview или overview).
+- `[?view=\<view-name>]` — (необязательно) имя представления, используемое средством выбора версии для содержимого, имеющего несколько версий (например, azps-3.5.0).
 
 > [!TIP]
-> Для статей в одном *docset* указывается один и тот же фрагмент URL-адреса после "docs.microsoft.com". Например, `https://docs.microsoft.com/dotnet/core/get-started` и `https://docs.microsoft.com/dotnet/framework/install` находятся в одном docset, а `https://docs.microsoft.com/dotnet/core/get-started` и `https://docs.microsoft.com/visualstudio/whats-new` — в разных.
+> В большинстве случаев для статей в одном _наборе документации_ указывается один и тот же фрагмент URL-адреса `<product-service>`. Например:
+> - Один набор документации
+>   - `https://docs.microsoft.com/dotnet/core/get-started`
+>   - `https://docs.microsoft.com/dotnet/framework/install`
+> - Разные наборы документации
+>   - `https://docs.microsoft.com/dotnet/core/get-started`
+>   - `https://docs.microsoft.com/visualstudio/whats-new`
 
-## <a name="links-to-anchors"></a>Ссылки на привязки
+## <a name="bookmark-links"></a>Ссылки закладок
 
-Создавать привязки не требуется. Они автоматически генерируются для всех заголовков H2 во время публикации. Достаточно создать ссылки на разделы H2.
+Чтобы добавить ссылку закладки на заголовок в *текущем* файле, используйте символ решетки, за которым следует текст заголовка в нижнем регистре. Удалите знаки препинания из заголовка и замените пробелы дефисами.
 
-- Для ссылки на заголовок в той же статье:
+```markdown
+[Managed Disks](#managed-disks)
+```
 
-  `[link](#the-text-of-the-H2-section-separated-by-hyphens)`
-  `[Create cache](#create-cache)`
+Чтобы добавить ссылку закладки на заголовок в другой статье, используйте относительную ссылку на файл или сайт, после которой укажите символ решетки и текст заголовка. Удалите знаки препинания из заголовка и замените пробелы дефисами.
 
-- Для ссылки на привязку в другой статье:
+```markdown
+[Managed Disks](../../linux/overview.md#managed-disks)
+```
 
-  `[link text](../directory/article-name.md#anchor-name)`
-  `[Configure your profile](../directory/media-services-create-account.md#configure-your-profile)`
+Можно также скопировать ссылку закладки из URL-адреса. Чтобы увидеть URL-адрес, наведите указатель мыши на строку заголовка на сайте docs.microsoft.com. Должен появиться значок ссылки:
+
+![Значок ссылки в заголовке статьи](media/how-to-write-links/bookmark-link.png)
+
+Щелкните значок ссылки, а затем скопируйте текст закладки из URL-адреса (то есть часть после символа решетки).
+
+> [!NOTE]
+> В расширении для работы с документацией также есть инструменты, помогающие создавать ссылки.
+
+### <a name="explicit-anchor-links"></a>Явные ссылки привязки
+
+Добавлять явные ссылки привязки, использующие HTML-тег `<a>`, не требуется и не рекомендуется, за исключением страниц-концентраторов и целевых страниц. Вместо них используйте автоматически созданные закладки, как описано в [этом разделе](#bookmark-links). Для страниц-концентраторов и целевых страниц привязки объявляются следующим образом:
+
+```markdown
+## <a id="anchortext" />Header text
+```
+
+или
+
+```markdown
+## <a name="anchortext" />Header text
+```
+
+Ссылка на привязку добавляется следующим образом:
+
+```markdown
+To go to a section on the same page:
+[text](#anchortext)
+
+To go to a section on another page.
+[text](filename.md#anchortext)
+```
+
+> [!NOTE]
+> Текст привязки должен всегда быть в нижнем регистре и не содержать пробелов.
+
+## <a name="xref-cross-reference-links"></a>Ссылки XRef (перекрестные ссылки)
+
+Ссылки XRef — это рекомендуемый способ ссылки на интерфейсы API, так как они проверяются во время сборки. Для ссылки на автоматически создаваемые страницы справочных материалов по API в текущем или другом наборе документации используйте ссылки XRef с уникальным идентификатором ([UID](#determine-the-uid)) типа или члена.
+
+> [!TIP]
+> Для вставки ссылок XRref .NET, доступных в [Обозреватель API .NET][], можно использовать [расширение Docs Markdown для VS Code][docsextension] (является частью Docs Authoring Pack).
+
+Проверьте, имеется ли интерфейс API, на который нужно добавить ссылку, на сайте [docs.microsoft.com][docs], введя его полное имя или его часть в поле поиска в [Обозреватель API .NET][] или [Windows UWP][]. Если результаты не отображаются, данный тип пока отсутствует на сайте docs.microsoft.com.
+
+Можно выбрать один из следующих вариантов синтаксиса:
+
+- Автоматические ссылки:
+
+   ```markdown
+   <xref:UID>
+   <xref:UID?displayProperty=nameWithType>
+   ```
+
+   По умолчанию в тексте ссылки отображается только имя члена или типа. Необязательный параметр запроса `displayProperty=nameWithType` создает полный текст ссылки, то есть **namespace.type** для типов и **type.member** для членов типов, включая перечисления.
+
+- Ссылки в стиле Markdown:
+
+   ```markdown
+   [link text](xref:UID)
+   ```
+
+   Ссылки в стиле Markdown используются, когда требуется настроить отображаемый текст ссылки.
+
+Примеры:
+
+- **\<xref:System.String>** отображается как <xref:System.String>.
+
+- **\<xref:System.String?displayProperty=nameWithType>** отображается как <xref:System.String?displayProperty=nameWithType>.
+
+- **\[Класс String](xref:System.String)** отображается как [Класс String](xref:System.String).
+
+Параметр запроса `displayProperty=fullName` работает так же, как `displayProperty=nameWithType` для классов. То есть текст ссылки принимает вид **пространство_имен.имя_класса**. Однако для членов текст ссылки отображается в виде **пространство_имен.имя_класса.имя_члена**, что может быть нежелательным.
+
+> [!NOTE]
+> Регистр в уникальных идентификаторах учитывается. Например, `<xref:System.Object>` разрешается успешно, а `<xref:system.object>` нет.
+
+### <a name="xref-build-warnings-and-incremental-builds"></a>Предупреждения сборки XRef и добавочные сборки
+
+При добавочной сборке выполняется сборка только тех файлов, которые были изменены или затронуты изменением. Если выводится предупреждение о недействительной ссылке XRef, которая на самом деле действительна, это может быть вызвано тем, что сборка была добавочной. Файл, вызвавший предупреждение, не изменялся, поэтому его сборка не выполнялась и были повторно выданы прошлые предупреждения. Предупреждение исчезнет после изменения файла или запуска полной сборки (запустить ее можно на сайте ops.microsoft.com). Это недостаток добавочных сборок, так как DocFX не может обнаружить изменение данных в службе XREF.
+
+### <a name="determine-the-uid"></a>Определение уникального идентификатора
+
+Уникальный идентификатор обычно совпадает с полным именем класса или члена. Определить уникальный идентификатор можно по крайней мере двумя способами.
+
+- Щелкните правой кнопкой мыши страницу [документации][docs] по типу или члену, выберите пункт **Просмотреть исходный код**, а затем скопируйте значение **content** для **ms.assetid**:
+
+  ![ms.assetid в исходном коде веб-страницы](media/how-to-write-links/ms-assetid.png)
+
+- Используйте [сайт автозаполнения][], добавив к URL-адресу имя типа или его часть. Например, если ввести `https://xref.docs.microsoft.com/autocomplete?text=Writeline` в адресной строке браузера, будут выведены все типы и методы, в именах которых есть строка **Writeline**, а также их уникальные идентификаторы.
+
+#### <a name="verify-the-uid"></a>Проверка уникального идентификатора
+
+Чтобы проверить правильность уникального идентификатора, замените строку **System.String** в следующем URL-адресе на свой уникальный идентификатор, а затем вставьте получившийся адрес в адресной строке браузера:
+
+`https://xref.docs.microsoft.com/query?uid=System.String`
+
+> [!TIP]
+> Регистр в уникальном идентификаторе в URL-адресе учитывается. Если вы проверяете уникальный идентификатор перегрузки метода, не включайте пробелы между типами параметров.
+
+Если результат будет следующим, значит уникальный идентификатор правилен:
+
+```text
+[{"uid":"System.String","name":"String","fullName":"System.String","href":"https://docs.microsoft.com/dotnet/api/system.string","tags":",/dotnet,netframework-4.5.1,netframework-4.5.2,netframework-4.5,...xamarinmac-3.0,public,","vendor":null,"hash":null,"commentId":"T:System.String","nameWithType":"System.String"},{"uid":"System.String","name":"String","fullName":"System.String","href":"https://docs.microsoft.com/dotnet/api/system.string","tags":",/dotnet,netframework-4.5.1,netframework-4.5.2,netframework-4.5,netframework-4.6,netframework-4.6.1,...,xamarinmac-3.0,public,","vendor":null,"hash":null,"commentId":"T:System.String","nameWithType":"System.String"}]
+```
+
+Если на странице отображается просто `[]`, значит уникальный идентификатор неправилен.
+
+### <a name="percent-encoding-of-urls"></a>Кодирование URL-адресов с помощью символа процента
+
+Специальные символы в уникальном идентификаторе должны быть закодированы в формате HTML следующим образом:
+
+| Символ | Кодирование HTML |
+| --------- | ------------- |
+| `` ` ``   | %60           |
+| `#`       | %23           |
+| `*`       | %2A           |
+
+См. полный список [кодов с символом процента](https://en.wikipedia.org/wiki/Percent-encoding).
+
+Примеры кодирования:
+
+- `System.Threading.Tasks.Task``1` кодируется как `System.Threading.Tasks.Task%601` (см. [раздел об универсальных типах](#generic-types)).
+
+- `System.Exception.#ctor` кодируется как `System.Exception.%23ctor`.
+
+- `System.Object.Equals*` кодируется как `System.Object.Equals%2A`.
+
+### <a name="generic-types"></a>Универсальные типы
+
+Универсальные типы — это такие типы, как `System.Collections.Generic.List<T>`. При переходе к этому типу в [обозревателе API .NET](https://docs.microsoft.com/dotnet/api/) и просмотре его URL-адреса вы увидите, что `<T>` записывается в URL-адресе как `-1`, что фактически представляет **`1**:
+
+`https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1`
+
+Чтобы создать ссылку на универсальный тип, например **List\<T>** , закодируйте символ обратного апострофа **\`** как **%60**, как показано в следующем примере:
+
+```markdown
+<xref:System.Collections.Generic.List%601>
+```
+
+### <a name="methods"></a>Методы
+
+Чтобы создать ссылку на метод, можно использовать ссылку либо на общую страницу метода (при этом после имени метода нужно добавить звездочку (`*`)), либо на конкретную перегрузку. Например, используйте общую страницу, если нужно указать ссылку на метод `<xref:System.Object.Equals%2A?displayProperty=nameWithType>` без конкретных типов параметров. Символ звездочки кодируется как `%2A`. Например:
+
+`<xref:System.Object.Equals%2a?displayProperty=nameWithType>` указывает на <xref:System.Object.Equals%2A?displayProperty=nameWithType>.
+
+Чтобы сослаться на конкретную перегрузку, добавьте скобки после имени метода и включите полное имя типа каждого параметра. Не ставьте пробелы между именами типов, иначе ссылка не будет работать. Например:
+
+`<xref:System.Object.Equals(System.Object,System.Object)?displayProperty=nameWithType>` указывает на <xref:System.Object.Equals(System.Object,System.Object)?displayProperty=nameWithType>.
 
 ## <a name="links-from-includes"></a>Ссылки во включаемых файлах
 
 Включаемые файлы содержатся в другом каталоге, поэтому для них используются более длинные относительные пути. Чтобы добавить ссылку на статью во включаемый файл, используйте следующий формат:
 
-   ```markdown
-   [link text](../articles/folder/article-name.md)
-   ```
+```markdown
+[link text](../articles/folder/article-name.md)
+```
+
+> [!TIP]
+> Расширение [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) для Visual Studio Code помогает правильно вставлять относительные ссылки и закладки в автоматическом режиме.
 
 ## <a name="links-in-selectors"></a>Ссылки в селекторах
 
-Селектор — это компонент навигации, который отображается в статье в документации как раскрывающийся список. Когда читатель выбирает значение в раскрывающемся списке, браузер открывает выбранную статью. Обычно список в селекторе содержит ссылки на связанные статьи, например, та же тема на разных языках программирования или тесно связанная серия статей. 
+Селектор — это компонент навигации, который отображается в статье в документации как раскрывающийся список. Когда читатель выбирает значение в раскрывающемся списке, браузер открывает выбранную статью. Обычно список в селекторе содержит ссылки на связанные статьи, например, та же тема на разных языках программирования или тесно связанная серия статей.
 
 Если во включаемый файл внедрены селекторы, используйте следующую структуру ссылки:
 
@@ -107,7 +291,7 @@ ms.locfileid: "75188343"
    - [(Text1 | Example1 )](../articles/folder/article-name1.md)
    - [(Text1 | Example2 )](../articles/folder/article-name2.md)
    - [(Text2 | Example3 )](../articles/folder/article-name3.md)
-   - [(Text2 | Example4 )](../articles/folder/article-name4.md) -->
+   - [(Text2 | Example4 )](../articles/folder/article-name4.md)
    ```
 
 ## <a name="reference-style-links"></a>Ссылки типа сносок
@@ -128,7 +312,7 @@ ms.locfileid: "75188343"
    [2]: http://search.yahoo.com/
    [3]: http://search.msn.com/
    ```
-   
+
 Обязательно используйте пробел после двоеточия перед ссылкой. Если при добавлении ссылок на другие технические статьи вы забудете включить пробел, ссылка не будет работать в опубликованной статье.
 
 ## <a name="links-to-pages-that-are-not-part-of-the-technical-documentation-set"></a>Ссылки на страницы, не являющиеся частью технической документации
@@ -138,7 +322,7 @@ ms.locfileid: "75188343"
    ```markdown
    [link text](https://azure.microsoft.com/pricing/details/virtual-machines/)
    ```
-   
+
 ## <a name="links-to-third-party-sites"></a>Ссылки на сторонние сайты
 
 Лучше избегать перенаправления пользователей на другие сайты. Но иногда это необходимо. При размещении ссылок на сторонние сайты руководствуйтесь следующей информацией:
@@ -148,40 +332,14 @@ ms.locfileid: "75188343"
 - **Проверки актуальности**. Следите за актуальностью, правильностью и релевантностью информации. Регулярно проверяйте, не изменилась ли ссылка.
 - **Информация о переходе на сайт стороннего поставщика**. Обязательно уведомляйте пользователей о том, что они переходят на другой сайт. Если это не следует из контекста, добавьте соответствующую фразу. Например: "Предварительные требования включают установку средств для разработчиков Android, которые вы можете скачать на сайте Android Studio".
 - **Дальнейшие действия**. Неплохим решением будет добавить ссылку, скажем, на блог MVP в разделе "Дальнейшие действия". Опять же, при этом пользователь должен понимать, что он покидает текущий сайт.
-- **Юридическая информация**. Юридическая информация предоставляется в разделе **Ссылки на веб-сайты третьих лиц** на странице **условий использования**. Ссылка на нее размещена в нижнем колонтитуле каждой страницы ms.com.
+- **Юридическая информация**. Юридическая информация предоставляется в разделе **Ссылки на веб-сайты третьих лиц** на странице **условий использования**. Ссылка на нее размещена в нижнем колонтитуле каждой страницы сайта microsoft.com.
 
-## <a name="links-to-azure-powershell-reference-content"></a>Ссылки на справочные материалы по Azure PowerShell
-
-Справочные материалы по Azure PowerShell с ноября 2016 г. претерпели некоторые изменения. Выполните приведенные ниже инструкции, чтобы добавить ссылку на эти материалы в другие статьи на сайте docs.microsoft.com.
-
-Структура URL-адреса:
-
-* Для командлетов:
-  - `/powershell/module/<module-name>/<cmdlet-name>[?view=<moniker-name>]`
-* Для тематических статей:
-  - `/powershell/azure/<topic-file-name>[?view=<moniker-name>]`
-  - `/powershell/azure/<service-name>/<topic-file-name>[?view=<moniker-name>]`
-
-Часть `<moniker-name>` не обязательна. Если ее исключить, пользователь будет направлен к последней версии содержимого. Часть `<service-name>` — это один из примеров базовых URL-адресов ниже:
-
-- Содержимое Azure PowerShell (AzureRM): [https://docs.microsoft.com/powershell/azure/](https://docs.microsoft.com/powershell/azure/)
-- Содержимое Azure PowerShell (ASM) : [https://docs.microsoft.com/powershell/azure/_servicemanagement_](https://docs.microsoft.com/powershell/azure/servicemanagement)
-- Содержимое Azure PowerShell для Active Directory (AzureAD): [https://docs.microsoft.com/powershell/azure/_active-directory_](https://docs.microsoft.com/powershell/azure/active-directory)
-- PowerShell для Azure Service Fabric [https://docs.microsoft.com/powershell/azure/_service-fabric_](https://docs.microsoft.com/powershell/azure/service-fabric)
-- PowerShell для Azure Information Protection: [https://docs.microsoft.com/powershell/azure/_aip_](https://docs.microsoft.com/powershell/azure/aip)
-- PowerShell для заданий эластичной базы данных заданий Azure: [https://docs.microsoft.com/powershell/azure/_elasticdbjobs_](https://docs.microsoft.com/powershell/azure/elasticdbjobs)
-
-Если включить эти URL-адреса, пользователь будет перенаправлен к последней версии содержимого. В таком случае указывать моникер версии не требуется. Кроме того, вам не придется обновлять ссылки на тематические материалы при изменении версии.
-
-Чтобы создать правильную ссылку на страницу, откройте ее в браузере и скопируйте URL-адрес, а затем удалите сведения о языковом стандарте, например **en-us**.
-
-Пример разметки Markdown:
-
-```markdown
-[Get-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/get-azurermresourcegroup)
-[Get-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/get-azurermresourcegroup?view=azurermps-4.1.0)
-[New-AzureVM](https://docs.microsoft.com/powershell/module/azure/new-azurevm?view=azuresmps-4.0.0)
-[New-AzureRmVM](https://docs.microsoft.com/powershell/module/azurerm.compute/new-azurermvm)
-[Install Azure PowerShell for Service Management](https://docs.microsoft.com/powershell/azure/servicemanagement/install-azurerm-ps)
-[Install Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps)
-```
+<!-- link references -->
+[CommonMark]: https://commonmark.org/
+[Markdig]: https://github.com/lunet-io/markdig
+[GFM]: https://help.github.com/categories/writing-on-github/
+[docs]: https://docs.microsoft.com
+[Обозреватель API .NET]: https://docs.microsoft.com/dotnet/api/
+[Windows UWP]: https://docs.microsoft.com/uwp/api
+[docsextension]: https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-markdown
+[Сайт автозаполнения]: https://xref.docs.microsoft.com/autocomplete?text=

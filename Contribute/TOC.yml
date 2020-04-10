@@ -53,28 +53,16 @@
     - name: Документация по .NET
       items:
         - name: Руководство по участию в разработке документации по .NET
-          href: dotnet-contribute.md
-        - name: Участие в разработке документации по .NET
-          href: dotnet-contribute-process.md
+          href: dotnet/dotnet-contribute.md
+        - name: Принципы использования меток и проектов
+          href: dotnet/labels-projects.md
         - name: Соглашения о стиле для документации по .NET
-          href: dotnet-style-guide.md
+          href: dotnet/dotnet-style-guide.md
         - name: Рекомендации по стилю
-          href: dotnet-voice-tone.md
+          href: dotnet/dotnet-voice-tone.md
         - name: Обзор запросов на вытягивание
-          href: dotnet-pr-review.md
-    - name: Документация по PowerShell
-      items:
-        - name: Руководство по участию в разработке документации по PowerShell
-          href: powershell\powershell-contribute.md
-        - name: Процесс участия в составлении документации по PowerShell
-          href: powershell\powershell-contribute-process.md
-        - name: Краткое руководство по написанию статей о PowerShell
-          href: powershell\powershell-style-basic-markdown.md
-        - name: Руководство по стилю при написании примеров скриптов PowerShell
-          href: powershell\powershell-style-code.md
-        - name: Руководство по стилю при написании справки по командлетам PowerShell
-          href: powershell\powershell-style-reference.md
-        - name: Отправка запроса на вытягивание для PowerShell
-          href: powershell\powershell-pull-requests.md
+          href: dotnet/dotnet-pr-review.md
+    - name: PowerShell-Docs
+      href: powershell-overview.md
 - name: Дополнительные ресурсы
   href: additional-resources.md
