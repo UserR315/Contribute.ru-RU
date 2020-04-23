@@ -7,12 +7,12 @@ ms.date: 02/19/2019
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 3efe66a71a4a61b84ff513a6253777cb2d21bc9e
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 95dadff41bb31e0b34ee34f85ae47708297954f1
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288656"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81784280"
 ---
 # <a name="microsoft-docs-contributor-guide-overview"></a>Руководство для участников разработки документации Майкрософт. Общие сведения
 
@@ -39,7 +39,7 @@ ms.locfileid: "72288656"
 
    ![Расположение ссылки "Изменить"](./media/index/edit-article.png)
 
-2. Щелкните значок карандаша, чтобы отредактировать статью. Если значок карандаша показан серым, войдите в свою учетную запись на GitHub или создайте новую. 
+2. Щелкните значок карандаша, чтобы отредактировать статью. Если значок карандаша показан серым, войдите в свою учетную запись GitHub или создайте новую. 
 
    ![Расположение значка карандаша](./media/index/edit-icon.png)
 

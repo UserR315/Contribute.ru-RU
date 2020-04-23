@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: d52d681987e26fddc89a33075b3d35279608ac04
-ms.sourcegitcommit: bf2f4c7d9050b480d4db306df19d4c9f8714eff0
+ms.openlocfilehash: d97d72e8458a53ab11b01cbd4bb5df3b8458b048
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80759575"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81784312"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>Узнайте, как участвовать в разработке репозиториев документации по .NET
 
@@ -203,6 +203,10 @@ ms.locfileid: "80759575"
 
 > [!NOTE]
 > Вы можете заметить, что сейчас не все статьи соответствуют представленным здесь рекомендациям. Мы работаем над единообразием сайта. Просмотрите список [открытых проблем](https://github.com/dotnet/docs/issues?q=is%3Aopen+is%3Aissue+label%3A%22%3Abookmark_tabs%3A+Information+Architecture%22), которые мы сейчас отслеживаем, чтобы достичь этой цели.
+
+### <a name="contributing-to-international-content"></a>Участие в создании международного контента   
+
+Предложения по улучшению содержимого с машинным переводом (MT) сейчас не принимаются. В целях улучшения качества такого содержимого мы перешли на подсистему МТ на базе нейронной сети. Мы с радостью принимаем предложения по улучшению контента, переведенного человеком (HT), который используется для обучения MT-подсистемы. С течением времени вносимые участниками правки в такой контент помогут улучшить качество как человеческого, так и машинного перевода. Разделы с MT будут иметь примечание о том, что часть их содержимого может использовать машинный перевод. В этих разделах не будет отображаться кнопка **Изменить**, так как их редактирование отключено.   
 
 ## <a name="contributor-license-agreement"></a>Лицензионное соглашение с участником
 
