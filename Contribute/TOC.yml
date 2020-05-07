@@ -26,7 +26,7 @@
       displayName: 'backtick, code blocks, inline code blocks, repo snippet reference, !code-, interactive code snippets, programming languages, languages, code extensions, extensions'
     - name: Форматирование текста
       href: text-formatting-guidelines.md
-    - name: Создание ссылок
+    - name: Ссылки
       href: how-to-write-links.md
     - name: Docs Authoring Pack
       items:

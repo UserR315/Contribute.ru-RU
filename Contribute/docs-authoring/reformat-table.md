@@ -7,17 +7,17 @@ ms.topic: contributor-guide
 ms.date: 03/03/2020
 ms.author: dapine
 ms.openlocfilehash: 07c95f2a0d24a49f59eaffe1bec64ee872530c2f
-ms.sourcegitcommit: dbc2c48194e29bfa0c88d33f50f94b9ee26be2da
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "78336780"
 ---
 # <a name="reformat-markdown-tables"></a>Переформатирование таблиц Markdown
 
 [!INCLUDE [markdown-extension](includes/markdown-extension.md)]
 
-## <a name="summary"></a>Сводка
+## <a name="summary"></a>Резюме
 
 В файле Markdown ( *\*MD*) при выборе всей таблицы теперь доступно два элемента контекстного меню форматирования. Чтобы открыть контекстное меню, щелкните правой кнопкой мыши выбранную таблицу Markdown. Вы увидите нечто похожее на следующие пункты меню.
 
